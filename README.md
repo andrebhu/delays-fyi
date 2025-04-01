@@ -1,2 +1,2 @@
-# mta-delay-tracker
+# MTA Delay Tracker
 Tracking MTA subway delays
