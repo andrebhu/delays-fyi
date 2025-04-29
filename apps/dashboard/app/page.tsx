@@ -37,7 +37,7 @@ export default async function Home() {
       const tenMinutesAgo = new Date(now.getTime() - 10 * 60 * 1000)
       return lastSeen <= tenMinutesAgo
     })
-    .slice(0, 5)
+    // .slice(0, 5)
 
   return (
     <main className="min-h-screen bg-gray-100 p-8">
@@ -56,7 +56,7 @@ export default async function Home() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Past Incidents (Last 5)</h2>
+          <h2 className="text-2xl font-semibold mb-4">Past Incidents</h2>
           {pastAlerts.length > 0 ? (
             pastAlerts.map(alert => (
               <AlertCard key={alert.alert_id} alert={alert} />
