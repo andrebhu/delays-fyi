@@ -11,13 +11,31 @@ function formatEasternTime(dateString: string): string {
   date.setHours(date.getHours() - 4)
   
   return date.toLocaleString('en-US', {
-    hour12: true,
-    hour: 'numeric',
+    timeZone: 'America/New_York',
+    hour12: false,
+    hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit',
     month: 'short',
     day: 'numeric',
     year: 'numeric'
+  })
+}
+
+function formatDescription(description: string): React.ReactNode {
+  // Replace [X] with LineIndicator components
+  const parts = description.split(/(\[[A-Z0-9]+\])/g)
+  
+  return parts.map((part, index) => {
+    if (part.match(/\[[A-Z0-9]+\]/)) {
+      // Extract the route from [X]
+      const route = part.slice(1, -1)
+      return (
+        <span key={index} className="inline-flex items-center">
+          <LineIndicator line={route} size="sm" />
+        </span>
+      )
+    }
+    return <span key={index}>{part}</span>
   })
 }
 
@@ -31,11 +49,11 @@ export default function AlertCard({ alert }: AlertCardProps) {
           ))}
         </div>
         <div className="flex-1">
-          <p className="text-gray-600">{alert.description}</p>
+          <div className="text-gray-600">{formatDescription(alert.description)}</div>
         </div>
-        <div className="text-sm text-gray-500 text-right">
-          <p className="whitespace-nowrap">Started: {formatEasternTime(alert.start_time)}</p>
+        <div className="text-sm text-gray-500 min-w-[240px] text-right font-mono">
           <p className="whitespace-nowrap">Last Seen: {formatEasternTime(alert.last_seen_time)}</p>
+          <p className="whitespace-nowrap">Started: {formatEasternTime(alert.start_time)}</p>
         </div>
       </div>
     </div>
