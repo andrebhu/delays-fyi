@@ -1,7 +1,7 @@
 'use client';
 
 import { Alert } from '@/types/alert';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { formatDescriptionWithLines } from '../lib/format';
 
 interface IncidentsListProps {
@@ -42,6 +42,21 @@ function formatEasternTime(dateString: string): string {
 
 export default function IncidentsList({ alerts, categories }: IncidentsListProps) {
   const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const getCategoryCount = (category: string) => {
     return alerts.filter(alert => {
@@ -97,6 +112,9 @@ export default function IncidentsList({ alerts, categories }: IncidentsListProps
     setSelectedFilters(newFilters);
   };
 
+  // Sort categories by count in descending order
+  const sortedCategories = [...categories].sort((a, b) => getCategoryCount(b) - getCategoryCount(a));
+
   const filteredAlerts = alerts
     .filter(alert => {
       if (selectedFilters.size === 0) return true;
@@ -148,25 +166,61 @@ export default function IncidentsList({ alerts, categories }: IncidentsListProps
     <div className="mt-8">
       <div className="mb-6">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold">Incident Details</h2>
-          <div className="text-sm text-gray-500">
-            Total Incidents: {alerts.length}
-          </div>
+          <h2 className="text-2xl font-semibold">Past Incidents</h2>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => toggleFilter(category)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
-                selectedFilters.has(category)
-                  ? 'bg-blue-600 text-white border-blue-700 shadow-sm'
-                  : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm'
-              }`}
+        <div className="relative" ref={dropdownRef}>
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="px-4 py-2 rounded-lg text-sm font-medium transition-colors border bg-white text-gray-700 border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm flex items-center gap-2"
+          >
+            Causes
+            <svg
+              className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {category} ({getCategoryCount(category)})
-            </button>
-          ))}
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {isDropdownOpen && (
+            <div className="absolute z-10 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200">
+              <div className="py-2">
+                {sortedCategories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => toggleFilter(category)}
+                    className={`w-full px-4 py-2 text-left text-sm flex justify-between items-center ${
+                      selectedFilters.has(category)
+                        ? 'bg-blue-50 text-blue-700'
+                        : 'text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    <span>{category}</span>
+                    <span className="text-gray-500">({getCategoryCount(category)})</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          {selectedFilters.size > 0 && (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {Array.from(selectedFilters).map((category) => (
+                <div
+                  key={category}
+                  className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium bg-blue-50 text-blue-700 rounded-full shadow-sm"
+                >
+                  {category}
+                  <button
+                    onClick={() => toggleFilter(category)}
+                    className="text-blue-500 hover:text-blue-700"
+                  >
+                    ×
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <div className="bg-white rounded-lg shadow overflow-hidden">
