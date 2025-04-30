@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata = {
-  title: 'MTA Delay Tracker',
+  title: 'delays.fyi',
   description: 'Track and analyze MTA subway delays in real-time',
 }
 
