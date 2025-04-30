@@ -1,6 +1,6 @@
 import { supabase } from '../../lib/supabase';
 import { Alert } from '@/types/alert';
-import DelayPieChart from '@/components/DelayPieChart';
+import DelayBarChart from '@/components/DelayBarChart';
 import IncidentsList from '@/components/IncidentsList';
 
 const CATEGORIES = ['NYPD', 'EMS', 'FDNY', 'Brakes', 'Door', 'Signal', 'Track', 'Cleaning', 'Switch', 'Disruptive', 'Mechanical', 'Other'];
@@ -49,11 +49,13 @@ export default async function CausesPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  // Convert to format needed for Recharts
-  const data = Object.entries(causeCounts).map(([name, value]) => ({
-    name,
-    value
-  }));
+  // Convert to format needed for Recharts and sort by value in descending order
+  const data = Object.entries(causeCounts)
+    .map(([name, value]) => ({
+      name,
+      value
+    }))
+    .sort((a, b) => b.value - a.value);
 
   return (
     <main className="min-h-screen bg-gray-100">
@@ -61,7 +63,7 @@ export default async function CausesPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow p-6">
             <h2 className="text-2xl font-semibold mb-6">Distribution of Delay Causes</h2>
-            <DelayPieChart data={data} />
+            <DelayBarChart data={data} />
           </div>
           <IncidentsList alerts={alerts} categories={CATEGORIES} />
         </div>
