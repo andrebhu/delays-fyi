@@ -1,5 +1,6 @@
 import { Alert } from '../types/alert'
 import LineIndicator from './LineIndicator'
+import { formatDescriptionWithLines } from '../lib/format'
 
 interface AlertCardProps {
   alert: Alert
@@ -29,24 +30,6 @@ function formatEasternTime(dateString: string): string {
   })
 }
 
-function formatDescription(description: string): React.ReactNode {
-  // Replace [X] with LineIndicator components
-  const parts = description.split(/(\[[A-Z0-9]+\])/g)
-  
-  return parts.map((part, index) => {
-    if (part.match(/\[[A-Z0-9]+\]/)) {
-      // Extract the route from [X]
-      const route = part.slice(1, -1)
-      return (
-        <span key={index} className="inline-flex items-center">
-          <LineIndicator line={route} size="sm" />
-        </span>
-      )
-    }
-    return <span key={index}>{part}</span>
-  })
-}
-
 export default function AlertCard({ alert }: AlertCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md p-4 mb-4">
@@ -57,7 +40,7 @@ export default function AlertCard({ alert }: AlertCardProps) {
           ))}
         </div>
         <div className="flex-1">
-          <div className="text-gray-600">{formatDescription(alert.description)}</div>
+          <div className="text-gray-600">{formatDescriptionWithLines(alert.description)}</div>
         </div>
         <div className="text-sm text-gray-500 min-w-[240px] text-right font-mono">
           <p className="whitespace-nowrap">Last Seen: {formatEasternTime(alert.last_seen_time)}</p>

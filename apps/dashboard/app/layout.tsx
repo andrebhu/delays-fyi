@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import "./globals.css";
+import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
+import Navbar from '@/components/Navbar'
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "MTA Delay Tracker",
-  description: "Track active and past MTA subway delays",
-};
+export const metadata = {
+  title: 'MTA Delay Tracker',
+  description: 'Track and analyze MTA subway delays in real-time',
+}
 
 export default function RootLayout({
   children,
@@ -17,10 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="min-h-screen bg-gray-100">
+        <Navbar />
         {children}
         <Analytics />
       </body>
     </html>
-  );
+  )
 }
