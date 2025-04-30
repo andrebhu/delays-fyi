@@ -1,7 +1,6 @@
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 interface DailyDelaysChartProps {
@@ -12,7 +11,15 @@ interface DailyDelaysChartProps {
   }[];
 }
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ 
+  active, 
+  payload, 
+  label 
+}: {
+  active?: boolean;
+  payload?: Array<{value: number; name: string}>;
+  label?: string;
+}) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-white p-4 border rounded-lg shadow-sm">
