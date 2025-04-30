@@ -18,15 +18,22 @@ function formatEasternTime(dateString: string): string {
     date.getUTCSeconds()
   ))
   
-  return utcDate.toLocaleString('en-US', {
+  const dateStr = utcDate.toLocaleDateString('en-US', {
     timeZone: 'America/New_York',
-    hour12: false,
-    hour: '2-digit',
-    minute: '2-digit',
-    month: 'short',
+    month: 'numeric',
     day: 'numeric',
     year: 'numeric'
   })
+  
+  const timeStr = utcDate.toLocaleTimeString('en-US', {
+    timeZone: 'America/New_York',
+    hour12: true,
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit'
+  })
+  
+  return `${dateStr} ${timeStr}`
 }
 
 export default function AlertCard({ alert }: AlertCardProps) {

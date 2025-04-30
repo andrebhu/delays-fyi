@@ -40,11 +40,11 @@ export default function LineIndicator({ line, size = 'md' }: LineIndicatorProps)
   const sizeClass = SIZE_CLASSES[size]
 
   return (
-    <div 
+    <span 
       className={`${sizeClass} rounded-full flex items-center justify-center font-bold text-white`}
       style={{ backgroundColor: lineColor }}
     >
       {line}
-    </div>
+    </span>
   )
 } 

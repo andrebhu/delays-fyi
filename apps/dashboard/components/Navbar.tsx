@@ -7,7 +7,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="text-white">
       <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">
           MTA Delay Tracker
