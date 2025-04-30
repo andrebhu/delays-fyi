@@ -7,7 +7,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="text-white">
+    <nav className="bg-black text-white">
       <div className="max-w-4xl mx-auto py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">
           delays.fyi

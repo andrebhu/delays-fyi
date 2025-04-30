@@ -1,9 +1,9 @@
 import { supabase } from '../../lib/supabase';
-import { Alert } from '@/types/alert';
-import DelayBarChart from '@/components/DelayBarChart';
-import DailyDelaysChart from '@/components/DailyDelaysChart';
-import TimeOfDayChart from '@/components/TimeOfDayChart';
-import IncidentsList from '@/components/IncidentsList';
+import { Alert } from '../../types/alert';
+import DelayBarChart from '../../components/DelayBarChart';
+import DailyDelaysChart from '../../components/DailyDelaysChart';
+import TimeOfDayChart from '../../components/TimeOfDayChart';
+import IncidentsList from '../../components/IncidentsList';
 
 const CATEGORIES = ['NYPD', 'EMS', 'FDNY', 'Brakes', 'Door', 'Signal', 'Track', 'Cleaning', 'Switch', 'Disruptive', 'Mechanical', 'Other'];
 
@@ -114,6 +114,8 @@ export default async function MetricsPage() {
     return { hour: hourStr, count: Number((count / 7).toFixed(2)) };
   });
 
+  const mostCommonCause = Object.entries(causeCounts).sort((a, b) => b[1] - a[1])[0][0];
+
   return (
     <main className="min-h-screen bg-gray-100">
       <div className="p-8">
@@ -130,11 +132,11 @@ export default async function MetricsPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900">Average Duration</h3>
-                <p className="text-3xl font-bold text-blue-600">{averageDurationMinutes} min</p>
+                <p className="text-3xl font-bold text-blue-600">{Number(averageDurationMinutes.toFixed(1))} min</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900">Most Common Cause</h3>
-                <p className="text-3xl font-bold text-blue-600">{Object.entries(causeCounts).sort((a, b) => b[1] - a[1])[0][0]}</p>
+                <p className="text-3xl font-bold text-blue-600">{mostCommonCause}</p>
               </div>
             </div>
           </section>
@@ -144,19 +146,15 @@ export default async function MetricsPage() {
               <h2 className="text-2xl font-semibold">Daily Trends</h2>
               <span className="text-sm text-gray-500">Past 7 days</span>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow">
-              <DailyDelaysChart data={chartData} />
-            </div>
+            <DailyDelaysChart data={chartData} />
           </section>
 
-          <section>
+          <section className="mb-12">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">Time of Day</h2>
               <span className="text-sm text-gray-500">Past 7 days</span>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow">
-              <TimeOfDayChart data={timeOfDayData} />
-            </div>
+            <TimeOfDayChart data={timeOfDayData} />
           </section>
 
           <section className="mb-12">
@@ -164,12 +162,10 @@ export default async function MetricsPage() {
               <h2 className="text-2xl font-semibold">Causes</h2>
               <span className="text-sm text-gray-500">Past 7 days</span>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow">
-              <DelayBarChart data={data} />
-            </div>
+            <DelayBarChart data={data} />
           </section>
 
-          <section className="mt-12">
+          <section>
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">All Incidents</h2>
               <span className="text-sm text-gray-500">Past 7 days</span>
