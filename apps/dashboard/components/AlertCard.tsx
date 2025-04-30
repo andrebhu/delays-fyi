@@ -27,10 +27,9 @@ function formatEasternTime(dateString: string): string {
   
   const timeStr = utcDate.toLocaleTimeString('en-US', {
     timeZone: 'America/New_York',
-    hour12: true,
     hour: 'numeric',
     minute: '2-digit',
-    second: '2-digit'
+    hour12: true
   })
   
   return `${dateStr} ${timeStr}`
