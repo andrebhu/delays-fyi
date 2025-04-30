@@ -25,7 +25,7 @@ function groupAlertsByDay(alerts: Alert[]) {
   const grouped = new Map<string, Alert[]>()
   
   alerts.forEach(alert => {
-    const date = new Date(alert.last_seen_time)
+    const date = new Date(alert.last_seen_time + 'Z')
     const dayKey = date.toLocaleDateString('en-US', {
       timeZone: 'America/New_York',
       month: 'long',

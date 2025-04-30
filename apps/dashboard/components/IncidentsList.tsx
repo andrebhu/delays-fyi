@@ -179,8 +179,8 @@ export default function IncidentsList({ alerts, categories }: IncidentsListProps
                     {formatDescriptionWithLines(alert.description)}
                   </p>
                   <div className="mt-2 flex items-center text-sm text-gray-500 gap-4">
-                    <span>Last seen: {formatEasternTime(alert.last_seen_time)}</span>
-                    <span>Started: {formatEasternTime(alert.start_time)}</span>
+                    <span>Last seen: {formatEasternTime(alert.last_seen_time + 'Z')}</span>
+                    <span>Started: {formatEasternTime(alert.start_time + 'Z')}</span>
                   </div>
                 </div>
               </div>
