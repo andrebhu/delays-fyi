@@ -1,13 +1,17 @@
 import { supabase } from '../lib/supabase'
 import AlertCard from '../components/AlertCard'
+import CollapsibleDaySection from '../components/CollapsibleDaySection'
 import { Alert } from '../types/alert'
 
 async function getAlerts() {
+  const oneWeekAgo = new Date()
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
+
   const { data: alerts, error } = await supabase
     .from('alerts')
     .select('*')
+    .gte('last_seen_time', oneWeekAgo.toISOString())
     .order('last_seen_time', { ascending: false })
-    .limit(100)
 
   if (error) {
     console.error('Error fetching alerts:', error)
@@ -15,6 +19,27 @@ async function getAlerts() {
   }
 
   return alerts as Alert[]
+}
+
+function groupAlertsByDay(alerts: Alert[]) {
+  const grouped = new Map<string, Alert[]>()
+  
+  alerts.forEach(alert => {
+    const date = new Date(alert.last_seen_time)
+    const dayKey = date.toLocaleDateString('en-US', {
+      timeZone: 'America/New_York',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    })
+    
+    if (!grouped.has(dayKey)) {
+      grouped.set(dayKey, [])
+    }
+    grouped.get(dayKey)!.push(alert)
+  })
+  
+  return grouped
 }
 
 export default async function Home() {
@@ -30,14 +55,15 @@ export default async function Home() {
     })
     .sort((a, b) => new Date(b.last_seen_time).getTime() - new Date(a.last_seen_time).getTime())
   
-  // Past incidents are the 5 most recent alerts that are no longer active
+  // Past incidents are alerts that are no longer active
   const pastAlerts = alerts
     .filter(alert => {
       const lastSeen = new Date(alert.last_seen_time + 'Z')
       const tenMinutesAgo = new Date(now.getTime() - 10 * 60 * 1000)
       return lastSeen <= tenMinutesAgo
     })
-    // .slice(0, 5)
+  
+  const groupedPastAlerts = groupAlertsByDay(pastAlerts)
 
   return (
     <main className="min-h-screen bg-gray-100 p-8">
@@ -58,8 +84,8 @@ export default async function Home() {
         <section>
           <h2 className="text-2xl font-semibold mb-4">Past Incidents</h2>
           {pastAlerts.length > 0 ? (
-            pastAlerts.map(alert => (
-              <AlertCard key={alert.alert_id} alert={alert} />
+            Array.from(groupedPastAlerts.entries()).map(([day, dayAlerts]) => (
+              <CollapsibleDaySection key={day} day={day} alerts={dayAlerts} />
             ))
           ) : (
             <p className="text-gray-600">No past incidents to display.</p>
