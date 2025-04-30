@@ -60,8 +60,8 @@ export default function AlertCard({ alert }: AlertCardProps) {
           <div className="text-gray-600">{formatDescription(alert.description)}</div>
         </div>
         <div className="text-sm text-gray-500 min-w-[240px] text-right font-mono">
-          <p className="whitespace-nowrap">Started: {formatEasternTime(alert.start_time)}</p>
           <p className="whitespace-nowrap">Last Seen: {formatEasternTime(alert.last_seen_time)}</p>
+          <p className="whitespace-nowrap">Started: {formatEasternTime(alert.start_time)}</p>
         </div>
       </div>
     </div>
