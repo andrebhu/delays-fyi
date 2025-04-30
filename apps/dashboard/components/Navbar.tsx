@@ -12,7 +12,7 @@ export default function Navbar() {
         <Link href="/" className="text-2xl font-bold">
           MTA Delay Tracker
         </Link>
-        <div className="space-x-6">
+        <div className="space-x-1">
           <Link
             href="/"
             className={`px-4 py-2 rounded-md text-base font-medium ${

@@ -2,6 +2,7 @@ import { supabase } from '../../lib/supabase';
 import { Alert } from '@/types/alert';
 import DelayBarChart from '@/components/DelayBarChart';
 import DailyDelaysChart from '@/components/DailyDelaysChart';
+import TimeOfDayChart from '@/components/TimeOfDayChart';
 import IncidentsList from '@/components/IncidentsList';
 
 const CATEGORIES = ['NYPD', 'EMS', 'FDNY', 'Brakes', 'Door', 'Signal', 'Track', 'Cleaning', 'Switch', 'Disruptive', 'Mechanical', 'Other'];
@@ -102,37 +103,81 @@ export default async function MetricsPage() {
   
   const averageDurationMinutes = Number((totalDuration / (alerts.length * 60000)).toFixed(1));
 
+  // Calculate time of day distribution (averaged over 7 days)
+  const timeOfDayData = Array.from({ length: 24 }, (_, hour) => {
+    const hourStr = hour.toString().padStart(2, '0') + ':00';
+    const count = alerts.filter(alert => {
+      const startTime = new Date(alert.start_time + 'Z');
+      return startTime.getUTCHours() === hour;
+    }).length;
+    // Average the count over 7 days
+    return { hour: hourStr, count: Number((count / 7).toFixed(2)) };
+  });
+
   return (
     <main className="min-h-screen bg-gray-100">
       <div className="p-8">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow p-6 mb-6">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-semibold">Delay Overview</h2>
+          <section className="mb-12">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-semibold">Overview</h2>
               <span className="text-sm text-gray-500">Past 7 days</span>
             </div>
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-medium text-gray-700">Total Delays</h3>
-                <p className="text-3xl font-bold text-gray-900">{alerts.length}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white p-6 rounded-lg shadow">
+                <h3 className="text-lg font-medium text-gray-900">Total Delays</h3>
+                <p className="text-3xl font-bold text-blue-600">{alerts.length}</p>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-medium text-gray-700">Average Duration</h3>
-                <p className="text-3xl font-bold text-gray-900">{averageDurationMinutes} min</p>
+              <div className="bg-white p-6 rounded-lg shadow">
+                <h3 className="text-lg font-medium text-gray-900">Average Duration</h3>
+                <p className="text-3xl font-bold text-blue-600">{averageDurationMinutes} min</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow">
+                <h3 className="text-lg font-medium text-gray-900">Most Common Cause</h3>
+                <p className="text-3xl font-bold text-blue-600">{Object.entries(causeCounts).sort((a, b) => b[1] - a[1])[0][0]}</p>
               </div>
             </div>
-            <h3 className="text-lg font-medium text-gray-700 mb-4">Delays by Day</h3>
-            <DailyDelaysChart data={chartData} />
-          </div>
+          </section>
 
-          <div className="bg-white rounded-lg shadow p-6">
-            <div className="flex justify-between items-center mb-6">
+          <section className="mb-12">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-semibold">Daily Trends</h2>
+              <span className="text-sm text-gray-500">Past 7 days</span>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <DailyDelaysChart data={chartData} />
+            </div>
+          </section>
+
+          <section>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-semibold">Time of Day</h2>
+              <span className="text-sm text-gray-500">Past 7 days</span>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <TimeOfDayChart data={timeOfDayData} />
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">Causes</h2>
               <span className="text-sm text-gray-500">Past 7 days</span>
             </div>
-            <DelayBarChart data={data} />
-          </div>
-          <IncidentsList alerts={alerts} categories={CATEGORIES} />
+            <div className="bg-white p-6 rounded-lg shadow">
+              <DelayBarChart data={data} />
+            </div>
+          </section>
+
+          <section className="mt-12">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-semibold">All Incidents</h2>
+              <span className="text-sm text-gray-500">Past 7 days</span>
+            </div>
+            <div className="bg-white rounded-lg shadow">
+              <IncidentsList alerts={alerts} categories={CATEGORIES} />
+            </div>
+          </section>
         </div>
       </div>
     </main>
