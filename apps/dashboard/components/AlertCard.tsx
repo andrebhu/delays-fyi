@@ -1,5 +1,4 @@
 import { Alert } from '../types/alert'
-import LineIndicator from './LineIndicator'
 import { formatDescriptionWithLines } from '../lib/format'
 
 interface AlertCardProps {
@@ -32,19 +31,16 @@ function formatEasternTime(dateString: string): string {
 
 export default function AlertCard({ alert }: AlertCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mb-4">
-      <div className="flex items-center gap-4">
-        <div className="flex gap-2 items-center">
-          {alert.routes.map(route => (
-            <LineIndicator key={route} line={route} />
-          ))}
-        </div>
+    <div className="p-4">
+      <div className="flex justify-between items-start">
         <div className="flex-1">
-          <div className="text-gray-600">{formatDescriptionWithLines(alert.description)}</div>
-        </div>
-        <div className="text-sm text-gray-500 min-w-[240px] text-right font-mono">
-          <p className="whitespace-nowrap">Last Seen: {formatEasternTime(alert.last_seen_time)}</p>
-          <p className="whitespace-nowrap">Started: {formatEasternTime(alert.start_time)}</p>
+          <p className="text-sm text-gray-900 flex flex-wrap items-center gap-1">
+            {formatDescriptionWithLines(alert.description)}
+          </p>
+          <div className="mt-2 flex items-center text-sm text-gray-500 gap-4">
+            <span>Last seen: {formatEasternTime(alert.last_seen_time)}</span>
+            <span>Started: {formatEasternTime(alert.start_time)}</span>
+          </div>
         </div>
       </div>
     </div>

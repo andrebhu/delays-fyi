@@ -72,9 +72,13 @@ export default async function Home() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Delays</h2>
             {activeAlerts.length > 0 ? (
-              activeAlerts.map(alert => (
-                <AlertCard key={alert.alert_id} alert={alert} />
-              ))
+              <div className="bg-white rounded-lg shadow overflow-hidden">
+                <div className="divide-y divide-gray-200">
+                  {activeAlerts.map(alert => (
+                    <AlertCard key={alert.alert_id} alert={alert} />
+                  ))}
+                </div>
+              </div>
             ) : (
               <p className="text-gray-600">No delays at this time. 🎉</p>
             )}

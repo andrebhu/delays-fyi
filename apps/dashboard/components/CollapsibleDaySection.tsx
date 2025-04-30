@@ -33,10 +33,12 @@ export default function CollapsibleDaySection({ day, alerts }: CollapsibleDaySec
       </button>
       <hr className="mb-4 border-gray-200" />
       {isExpanded && (
-        <div className="space-y-4">
-          {alerts.map(alert => (
-            <AlertCard key={alert.alert_id} alert={alert} />
-          ))}
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="divide-y divide-gray-200">
+            {alerts.map(alert => (
+              <AlertCard key={alert.alert_id} alert={alert} />
+            ))}
+          </div>
         </div>
       )}
     </div>
