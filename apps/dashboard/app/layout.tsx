@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'delays.fyi',
-  description: '',
+  description: 'Tracking NYC Subway Delays',
 }
 
 export default function RootLayout({
