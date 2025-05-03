@@ -94,6 +94,7 @@ export default async function Home() {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Past Alerts</h2>
+          
             {pastAlerts.length > 0 ? (
               Array.from(groupedPastAlerts.entries()).map(([day, dayAlerts]) => (
                 <CollapsibleDaySection key={day} day={day} alerts={dayAlerts} />

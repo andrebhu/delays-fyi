@@ -2,6 +2,7 @@ import { supabase } from '../../lib/supabase';
 import { Alert } from '../../types/alert';
 import DelayBarChart from '../../components/DelayBarChart';
 import DailyDelaysChart from '../../components/DailyDelaysChart';
+import LineIndicator from '../../components/LineIndicator';
 
 function categorizeCause(description: string): string {
   const lowerDesc = description.toLowerCase();
@@ -51,7 +52,7 @@ async function getTotalAlertsCount() {
 
 export default async function MetricsPage() {
   const alerts = await getAlerts();
-  const totalAlertsCount = await getTotalAlertsCount();
+  
   
   // Count occurrences of each cause
   const causeCounts = alerts.reduce((acc, alert) => {
@@ -96,7 +97,11 @@ export default async function MetricsPage() {
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-  const mostCommonCause = Object.entries(causeCounts).sort((a, b) => b[1] - a[1])[0][0];
+
+  const totalAlertsCount = await getTotalAlertsCount();
+  // TODO: Hardcoded for now
+  const mostCommonCause = "Brakes" 
+  const mostDelayedTrain = "2"; 
 
   return (
     <main className="min-h-screen bg-gray-100">
@@ -106,10 +111,14 @@ export default async function MetricsPage() {
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">Overview</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900">Total Alerts</h3>
                 <p className="text-3xl font-bold text-blue-600">{totalAlertsCount}</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow">
+                <h3 className="text-lg font-medium text-gray-900">Most Delayed Line</h3>
+                <LineIndicator line={mostDelayedTrain} size="md" />
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900">Most Common Cause</h3>

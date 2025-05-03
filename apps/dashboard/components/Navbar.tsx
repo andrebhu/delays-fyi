@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="bg-black text-white">
       <div className="max-w-4xl mx-auto py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="/" className="text-2xl ml-2 font-bold">
           delays.fyi
         </Link>
         <div className="space-x-1">

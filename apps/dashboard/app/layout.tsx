@@ -2,10 +2,11 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import Navbar from '@/components/Navbar'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'delays.fyi',
-  description: 'Track and analyze MTA subway delays in real-time',
+  description: '',
 }
 
 export default function RootLayout({
@@ -20,6 +21,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
+        <Footer />
       </body>
     </html>
   )
