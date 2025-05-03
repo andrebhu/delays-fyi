@@ -4,13 +4,13 @@ import CollapsibleDaySection from '../components/CollapsibleDaySection'
 import { Alert } from '../types/alert'
 
 async function getAlerts() {
-  const oneWeekAgo = new Date()
-  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
+  const fourDaysAgo = new Date()
+  fourDaysAgo.setDate(fourDaysAgo.getDate() - 4)
 
   const { data: alerts, error } = await supabase
     .from('alerts')
     .select('*')
-    .gte('last_seen_time', oneWeekAgo.toISOString())
+    .gte('last_seen_time', fourDaysAgo.toISOString())
     .order('last_seen_time', { ascending: false })
 
   if (error) {
@@ -28,9 +28,9 @@ function groupAlertsByDay(alerts: Alert[]) {
     const date = new Date(alert.last_seen_time + 'Z')
     const dayKey = date.toLocaleDateString('en-US', {
       timeZone: 'America/New_York',
+      weekday: 'short',
       month: 'long',
-      day: 'numeric',
-      year: 'numeric'
+      day: 'numeric'
     })
     
     if (!grouped.has(dayKey)) {
@@ -38,6 +38,14 @@ function groupAlertsByDay(alerts: Alert[]) {
     }
     grouped.get(dayKey)!.push(alert)
   })
+  
+  // Remove the oldest day
+  const sortedDays = Array.from(grouped.keys()).sort((a, b) => 
+    new Date(b).getTime() - new Date(a).getTime()
+  )
+  if (sortedDays.length > 0) {
+    grouped.delete(sortedDays[sortedDays.length - 1])
+  }
   
   return grouped
 }
@@ -70,7 +78,7 @@ export default async function Home() {
       <div className="p-8">
         <div className="max-w-4xl mx-auto">
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Delays</h2>
+            <h2 className="text-2xl font-semibold mb-4">Active Delays</h2>
             {activeAlerts.length > 0 ? (
               <div className="bg-white rounded-lg shadow overflow-hidden">
                 <div className="divide-y divide-gray-200">
@@ -85,13 +93,13 @@ export default async function Home() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Past Incidents</h2>
+            <h2 className="text-2xl font-semibold mb-4">Past Alerts</h2>
             {pastAlerts.length > 0 ? (
               Array.from(groupedPastAlerts.entries()).map(([day, dayAlerts]) => (
                 <CollapsibleDaySection key={day} day={day} alerts={dayAlerts} />
               ))
             ) : (
-              <p className="text-gray-600">No past incidents to display. 🎉</p>
+              <p className="text-gray-600">No past alerts to display. 🎉</p>
             )}
           </section>
         </div>
@@ -100,5 +108,4 @@ export default async function Home() {
   )
 }
 
-export const dynamic = 'force-dynamic';
 export const revalidate = 300; // Revalidate every 5 minutes

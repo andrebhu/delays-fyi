@@ -20,7 +20,7 @@ export default function CollapsibleDaySection({ day, alerts }: CollapsibleDaySec
       >
         <span>{day}</span>
         <span className="text-sm text-gray-500">
-          ({alerts.length} {alerts.length === 1 ? 'incident' : 'incidents'})
+          ({alerts.length})
         </span>
         <svg
           className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-0' : '-rotate-90'}`}

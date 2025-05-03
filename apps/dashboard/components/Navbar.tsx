@@ -33,6 +33,16 @@ export default function Navbar() {
           >
             Metrics
           </Link>
+          <Link
+            href="https://mta.info"
+            className={`px-4 py-2 rounded-md text-base font-medium ${
+              pathname === 'https://mta.info'
+                ? 'bg-gray-900 text-white'
+                : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+            }`}
+          >
+            More
+          </Link>
         </div>
       </div>
     </nav>

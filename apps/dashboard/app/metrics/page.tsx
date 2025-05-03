@@ -3,7 +3,6 @@ import { Alert } from '../../types/alert';
 import DelayBarChart from '../../components/DelayBarChart';
 import DailyDelaysChart from '../../components/DailyDelaysChart';
 import TimeOfDayChart from '../../components/TimeOfDayChart';
-import IncidentsList from '../../components/IncidentsList';
 
 const CATEGORIES = ['NYPD', 'EMS', 'FDNY', 'Brakes', 'Door', 'Signal', 'Track', 'Cleaning', 'Switch', 'Disruptive', 'Mechanical', 'Other'];
 
@@ -41,8 +40,22 @@ async function getAlerts() {
   return alerts as Alert[];
 }
 
+async function getTotalAlertsCount() {
+  const { count, error } = await supabase
+    .from('alerts')
+    .select('*', { count: 'exact', head: true });
+
+  if (error) {
+    console.error('Error fetching total alerts count:', error);
+    return 0;
+  }
+
+  return count || 0;
+}
+
 export default async function MetricsPage() {
   const alerts = await getAlerts();
+  const totalAlertsCount = await getTotalAlertsCount();
   
   // Count occurrences of each cause
   const causeCounts = alerts.reduce((acc, alert) => {
@@ -123,12 +136,11 @@ export default async function MetricsPage() {
           <section className="mb-12">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">Overview</h2>
-              <span className="text-sm text-gray-500">Past 7 days</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900">Total Delays</h3>
-                <p className="text-3xl font-bold text-blue-600">{alerts.length}</p>
+                <p className="text-3xl font-bold text-blue-600">{totalAlertsCount}</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900">Average Duration</h3>
@@ -164,21 +176,10 @@ export default async function MetricsPage() {
             </div>
             <DelayBarChart data={data} />
           </section>
-
-          <section>
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-semibold">All Incidents</h2>
-              <span className="text-sm text-gray-500">Past 7 days</span>
-            </div>
-            <div className="bg-white rounded-lg shadow">
-              <IncidentsList alerts={alerts} categories={CATEGORIES} />
-            </div>
-          </section>
         </div>
       </div>
     </main>
   );
 }
 
-export const dynamic = 'force-dynamic';
 export const revalidate = 900; // Revalidate every 15 minutes 
