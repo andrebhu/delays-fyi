@@ -4,8 +4,6 @@ import DelayBarChart from '../../components/DelayBarChart';
 import DailyDelaysChart from '../../components/DailyDelaysChart';
 import TimeOfDayChart from '../../components/TimeOfDayChart';
 
-const CATEGORIES = ['NYPD', 'EMS', 'FDNY', 'Brakes', 'Door', 'Signal', 'Track', 'Cleaning', 'Switch', 'Disruptive', 'Mechanical', 'Other'];
-
 function categorizeCause(description: string): string {
   const lowerDesc = description.toLowerCase();
   
