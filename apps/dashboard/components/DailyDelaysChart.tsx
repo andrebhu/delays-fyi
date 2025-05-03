@@ -7,7 +7,6 @@ interface DailyDelaysChartProps {
   data: {
     date: string;
     count: number;
-    avgDuration: number;
   }[];
 }
 
@@ -25,7 +24,6 @@ const CustomTooltip = ({
       <div className="bg-white p-4 border rounded-lg shadow-sm">
         <p className="font-medium">{label}</p>
         <p className="text-blue-600">Delays: {payload[0].value}</p>
-        <p className="text-green-600">Avg Duration: {payload[1].value} min</p>
       </div>
     );
   }
@@ -52,35 +50,16 @@ export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
                 tickLine={{ stroke: '#666' }}
               />
               <YAxis 
-                yAxisId="left"
-                orientation="left"
-                tick={{ fill: '#666' }}
-                tickLine={{ stroke: '#666' }}
-              />
-              <YAxis 
-                yAxisId="right"
-                orientation="right"
                 tick={{ fill: '#666' }}
                 tickLine={{ stroke: '#666' }}
               />
               <Tooltip content={<CustomTooltip />} />
               <Legend />
               <Line
-                yAxisId="left"
                 type="monotone"
                 dataKey="count"
                 name="Total Delays"
                 stroke="#2563eb"
-                strokeWidth={2}
-                dot={{ r: 4 }}
-                activeDot={{ r: 6 }}
-              />
-              <Line
-                yAxisId="right"
-                type="monotone"
-                dataKey="avgDuration"
-                name="Avg Duration (min)"
-                stroke="#22c55e"
                 strokeWidth={2}
                 dot={{ r: 4 }}
                 activeDot={{ r: 6 }}

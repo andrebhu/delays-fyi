@@ -1,7 +1,11 @@
 'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { BarChart, Bar, XAxis, YAxis, LabelList } from 'recharts';
+import {
+  ChartConfig,
+  ChartContainer,
+} from "@/components/ui/chart";
 
 interface DelayBarChartProps {
   data: Array<{
@@ -10,39 +14,63 @@ interface DelayBarChartProps {
   }>;
 }
 
+const chartConfig = {
+  value: {
+    label: "Delays",
+    color: "hsl(221.2 83.2% 53.3%)", // Blue-600
+  },
+  label: {
+    color: "hsl(0 0% 100%)", // White
+  },
+} satisfies ChartConfig;
+
 export default function DelayBarChart({ data }: DelayBarChartProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Delays by Cause</CardTitle>
+        <CardTitle>Causes of Delays</CardTitle>
+        <CardDescription>This chart shows the most frequent causes for delays.</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="h-[300px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={data}
-              layout="vertical"
-              margin={{
-                top: 20,
-                right: 30,
-                left: 100,
-                bottom: 30,
-              }}
+        <ChartContainer config={chartConfig}>
+          <BarChart
+            data={data}
+            layout="vertical"
+            margin={{
+              left: 0,
+            }}
+          >
+            <YAxis
+              dataKey="name"
+              type="category"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+              tick={{ fill: 'hsl(var(--foreground))' }}
+              tickFormatter={(value: string) => value}
+            />
+            <XAxis
+              dataKey="value"
+              type="number"
+              hide
+            />
+            <Bar
+              dataKey="value"
+              fill="hsl(221.2 83.2% 53.3%)"
+              radius={4}
+              minPointSize={5}
             >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis type="number" />
-              <YAxis 
-                dataKey="name" 
-                type="category" 
-                width={100}
-                tick={{ fontSize: 12 }}
-                interval={0}
+              <LabelList
+                dataKey="value"
+                position="right"
+                offset={8}
+                className="fill-foreground"
+                fontSize={12}
+                formatter={(value: number) => value.toLocaleString()}
               />
-              <Tooltip />
-              <Bar dataKey="value" fill="#8884d8" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+            </Bar>
+          </BarChart>
+        </ChartContainer>
       </CardContent>
     </Card>
   );
