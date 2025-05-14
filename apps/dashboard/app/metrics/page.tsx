@@ -4,21 +4,6 @@ import DailyDelaysChart from '@/components/DailyDelaysChart';
 import LineIndicator from '@/components/LineIndicator';
 import RouteCountsChart from '@/components/RouteCountsChart';
 
-function categorizeCause(description: string): string {
-  const lowerDesc = description.toLowerCase();
-  
-  if (lowerDesc.includes('nypd')) return 'NYPD';
-  if (lowerDesc.includes('ems')) return 'EMS';
-  if (lowerDesc.includes('fdny')) return 'FDNY';
-  if (lowerDesc.includes('brake')) return 'Brakes';
-  if (lowerDesc.includes('door')) return 'Door';
-  if (lowerDesc.includes('signal')) return 'Signal';
-  if (lowerDesc.includes('track')) return 'Track';
-  if (lowerDesc.includes('clean')) return 'Cleaning';
-  if (lowerDesc.includes('switch')) return 'Switch';
-
-  return 'Other';
-}
 
 async function getAlerts() {
   const oneWeekAgo = new Date();
@@ -52,21 +37,6 @@ async function getTotalAlertsCount() {
 
 export default async function MetricsPage() {
   const alerts = await getAlerts();
-  
-  // Count occurrences of each cause
-  const causeCounts = alerts.reduce((acc, alert) => {
-    const cause = categorizeCause(alert.description);
-    acc[cause] = (acc[cause] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
-
-  // Convert to format needed for Recharts and sort by value in descending order
-  const data = Object.entries(causeCounts)
-    .map(([name, value]) => ({
-      name,
-      value
-    }))
-    .sort((a, b) => b.value - a.value);
 
   // Calculate daily delay counts and average duration
   const dailyData = alerts.reduce((acc, alert) => {
@@ -96,14 +66,13 @@ export default async function MetricsPage() {
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-
   const totalAlertsCount = await getTotalAlertsCount();
+  const routeCounts = await fetchRouteCounts();
+
+  const mostDelayedRoute = routeCounts[0].route;
+  
   // TODO: Hardcoded for now
   const mostCommonCause = "Brakes" 
-
-  const routeCounts = await fetchRouteCounts();
-  const mostDelayedRoute = routeCounts[0].route;
-  console.log(routeCounts);
 
   return (
     <main className="min-h-screen bg-gray-100">
