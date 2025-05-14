@@ -17,7 +17,7 @@ export default function Navbar() {
             href="/"
             className={`px-4 py-2 rounded-md text-base font-medium ${
               pathname === '/'
-                ? 'bg-gray-900 text-white'
+                ? 'bg-gray-700 text-white'
                 : 'text-gray-300 hover:bg-gray-700 hover:text-white'
             }`}
           >
@@ -27,7 +27,7 @@ export default function Navbar() {
             href="/metrics"
             className={`px-4 py-2 rounded-md text-base font-medium ${
               pathname === '/metrics'
-                ? 'bg-gray-900 text-white'
+                ? 'bg-gray-700 text-white'
                 : 'text-gray-300 hover:bg-gray-700 hover:text-white'
             }`}
           >
@@ -35,11 +35,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="https://mta.info"
-            className={`px-4 py-2 rounded-md text-base font-medium ${
-              pathname === 'https://mta.info'
-                ? 'bg-gray-900 text-white'
-                : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-            }`}
+            className="px-4 py-2 rounded-md text-base font-medium"
           >
             mta.info
           </Link>
