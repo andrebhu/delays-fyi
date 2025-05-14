@@ -41,7 +41,7 @@ export default function Navbar() {
                 : 'text-gray-300 hover:bg-gray-700 hover:text-white'
             }`}
           >
-            More
+            mta.info
           </Link>
         </div>
       </div>
