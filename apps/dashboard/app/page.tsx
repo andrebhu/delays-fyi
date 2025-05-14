@@ -1,7 +1,7 @@
-import { supabase } from '../lib/supabase'
-import AlertCard from '../components/AlertCard'
-import CollapsibleDaySection from '../components/CollapsibleDaySection'
-import { Alert } from '../types/alert'
+import { supabase } from '@/lib/supabase'
+import AlertCard from '@/components/AlertCard'
+import CollapsibleDaySection from '@/components/CollapsibleDaySection'
+import { Alert } from '@/types/alert'
 
 async function getAlerts() {
   const fourDaysAgo = new Date()
