@@ -42,10 +42,15 @@ const chartConfig = {
 const CustomTooltip = ({
   active,
   payload,
-  label,
 }: {
   active?: boolean;
-  payload?: any[];
+  payload?: Array<{
+    value: number;
+    payload: {
+      name: string;
+      value: number;
+    };
+  }>;
   label?: string;
 }) => {
   if (active && payload?.length) {
