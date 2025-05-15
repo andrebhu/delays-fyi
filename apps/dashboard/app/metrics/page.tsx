@@ -6,13 +6,15 @@ import RouteCountsChart from '@/components/RouteCountsChart';
 
 
 async function getAlerts() {
-  const oneWeekAgo = new Date();
-  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+  const today = new Date();
+  const eightDaysAgo = new Date();
+  eightDaysAgo.setDate(eightDaysAgo.getDate() - 8);
   
   const { data: alerts, error } = await supabase
     .from('alerts')
     .select('*')
-    .gte('last_seen_time', oneWeekAgo.toISOString());
+    .gte('last_seen_time', eightDaysAgo.toISOString())
+    .lt('last_seen_time', today.toISOString().split('T')[0] + 'T00:00:00Z');
 
   if (error) {
     console.error('Error fetching alerts:', error);
@@ -43,7 +45,7 @@ export default async function MetricsPage() {
     const date = new Date(alert.last_seen_time + 'Z');
     const dateStr = date.toLocaleDateString('en-US', {
       timeZone: 'America/New_York',
-      month: 'short',
+      month: 'numeric',
       day: 'numeric',
       weekday: 'short'
     });

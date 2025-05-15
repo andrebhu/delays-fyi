@@ -1,7 +1,25 @@
 'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from 'recharts';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  ChartContainer,
+  ChartConfig,
+} from '@/components/ui/chart';
 
 interface DailyDelaysChartProps {
   data: {
@@ -10,13 +28,23 @@ interface DailyDelaysChartProps {
   }[];
 }
 
-const CustomTooltip = ({ 
-  active, 
-  payload, 
-  label 
+const chartConfig = {
+  value: {
+    label: 'Delays',
+    color: 'hsl(221.2 83.2% 53.3%)', // Blue-600
+  },
+  label: {
+    color: 'hsl(0 0% 100%)', // White
+  },
+} satisfies ChartConfig;
+
+const CustomTooltip = ({
+  active,
+  payload,
+  label,
 }: {
   active?: boolean;
-  payload?: Array<{value: number; name: string}>;
+  payload?: Array<{ value: number; name: string }>;
   label?: string;
 }) => {
   if (active && payload && payload.length) {
@@ -32,42 +60,47 @@ const CustomTooltip = ({
 
 export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
   return (
-    <Card className="w-full">
+    <Card className="gap-2">
       <CardHeader>
         <CardTitle>Daily Trends</CardTitle>
+        <CardDescription>
+          Subway delay counts over time, aggregated by day.
+        </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="h-[400px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart
-              data={data}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis 
-                dataKey="date" 
-                tick={{ fill: '#666' }}
-                tickLine={{ stroke: '#666' }}
-              />
-              <YAxis 
-                tick={{ fill: '#666' }}
-                tickLine={{ stroke: '#666' }}
-              />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
-              <Line
-                type="monotone"
-                dataKey="count"
-                name="Total Delays"
-                stroke="#2563eb"
-                strokeWidth={2}
-                dot={{ r: 4 }}
-                activeDot={{ r: 6 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        <ChartContainer config={chartConfig} style={{ height: '100%', width: '100%' }}>
+          <AreaChart
+            data={data}
+            margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#CBCBCB" />
+            <XAxis
+              dataKey="date"
+              tick={{ fill: '#6b7280', fontSize: 12 }}
+              tickLine={false}
+              interval={0}
+              axisLine={{ stroke: '#e5e7eb' }}
+              angle={-45}
+              textAnchor="end"
+            />
+            <YAxis
+              tick={{ fill: '#6b7280', fontSize: 12 }}
+              tickLine={false}
+              axisLine={{ stroke: '#e5e7eb' }}
+              width={28}
+            />
+            <Tooltip content={<CustomTooltip />} />
+            <Area
+              type="monotone"
+              dataKey="count"
+              stroke={chartConfig.value.color}
+              fill="hsl(221.2 83.2% 53.3% / 0.2)" // translucent fill
+              strokeWidth={2}
+              activeDot={{ r: 5 }}
+            />
+          </AreaChart>
+        </ChartContainer>
       </CardContent>
     </Card>
   );
-} 
+}
