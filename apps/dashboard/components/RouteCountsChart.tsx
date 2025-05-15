@@ -20,6 +20,7 @@ import {
 } from '@/components/ui/chart';
 import LineIndicator from './LineIndicator';
 
+
 interface RouteCountsChartProps {
   data: Array<{
     route: string;
@@ -47,29 +48,28 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
       value: count,
     }));
 
-  const rowHeight = 28; // px per bar
+  const rowHeight = 30; // px per bar
   const chartHeight = rowHeight * topData.length;
   const maxHeight = 500; // Max scroll height
 
   return (
-    <Card>
+    <Card className="gap-2">
       <CardHeader>
         <CardTitle>Most Delayed</CardTitle>
         <CardDescription>
           Top 10 most delayed subway lines based on historical alerts.
         </CardDescription>
       </CardHeader>
-      <CardContent className="overflow-y-auto" style={{ maxHeight }}>
-        <ChartContainer config={chartConfig}>
+      <CardContent className="overflow-hidden" style={{ maxHeight }}>
+        <ChartContainer config={chartConfig} style={{ height: chartHeight }}>
           <BarChart
             data={topData}
             layout="vertical"
-            width={600}
-            height={chartHeight}
-            margin={{ left: 0 }}
+            barSize={25}
           >
             <YAxis
               dataKey="name"
+              width={28}
               type="category"
               tickLine={false}
               tickMargin={25}
