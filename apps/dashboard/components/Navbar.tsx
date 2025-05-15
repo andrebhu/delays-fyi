@@ -35,7 +35,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="https://mta.info"
-            className="px-4 py-2 rounded-md text-base font-medium"
+            className="px-4 py-2 rounded-md text-base font-medium hover:bg-gray-700 hover:text-white"
           >
             mta.info
           </Link>
