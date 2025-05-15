@@ -7,21 +7,41 @@ import RouteCountsChart from '@/components/RouteCountsChart';
 
 async function getAlerts() {
   const today = new Date();
-  const eightDaysAgo = new Date();
-  eightDaysAgo.setDate(eightDaysAgo.getDate() - 8);
+  const thirtyDaysAgo = new Date();
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
   
-  const { data: alerts, error } = await supabase
-    .from('alerts')
-    .select('*')
-    .gte('last_seen_time', eightDaysAgo.toISOString())
-    .lt('last_seen_time', today.toISOString().split('T')[0] + 'T00:00:00Z');
+  let allAlerts: Alert[] = [];
+  let from = 0;
+  const pageSize = 1000;
+  
+  while (true) {
+    const { data: alerts, error } = await supabase
+      .from('alerts')
+      .select('*')
+      .gte('last_seen_time', thirtyDaysAgo.toISOString())
+      .lte('last_seen_time', today.toISOString())
+      .range(from, from + pageSize - 1);
 
-  if (error) {
-    console.error('Error fetching alerts:', error);
-    return [];
+    if (error) {
+      console.error('Error fetching alerts:', error);
+      return [];
+    }
+
+    if (!alerts || alerts.length === 0) {
+      break;
+    }
+
+    allAlerts = [...allAlerts, ...alerts];
+    from += pageSize;
+
+    // If we got less than pageSize results, we've reached the end
+    if (alerts.length < pageSize) {
+      break;
+    }
   }
 
-  return alerts as Alert[];
+  console.log(`Fetched ${allAlerts.length} total alerts`);
+  return allAlerts;
 }
 
 async function getTotalAlertsCount() {
@@ -52,22 +72,43 @@ export default async function MetricsPage() {
     
     if (!acc[dateStr]) {
       acc[dateStr] = {
-        count: 0
+        count: 0,
+        date: date // Store the actual date object for sorting
       };
     }
     
     acc[dateStr].count += 1;
     
     return acc;
-  }, {} as Record<string, { count: number }>);
+  }, {} as Record<string, { count: number; date: Date }>);
 
-  const chartData = Object.entries(dailyData)
-    .map(([date, data]) => ({
-      date,
-      count: data.count
-    }))
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  // Get the date range
+  const dates = Object.values(dailyData).map(d => d.date);
+  const startDate = new Date(Math.min(...dates.map(d => d.getTime())));
+  const endDate = new Date(Math.max(...dates.map(d => d.getTime())));
 
+  // Fill in missing days with zero counts
+  const allDates: { date: string; count: number }[] = [];
+  for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+    const dateStr = d.toLocaleDateString('en-US', {
+      timeZone: 'America/New_York',
+      month: 'numeric',
+      day: 'numeric',
+      weekday: 'short'
+    });
+    
+    allDates.push({
+      date: dateStr,
+      count: dailyData[dateStr]?.count || 0
+    });
+  }
+
+  console.log('Date range:', startDate.toISOString(), 'to', endDate.toISOString());
+  console.log('Total alerts:', alerts.length);
+  console.log('Days with data:', Object.keys(dailyData).length);
+  console.log('Days in range:', allDates.length);
+
+  const chartData = allDates;
 
   const totalAlertsCount = await getTotalAlertsCount();
   const routeCounts = await fetchRouteCounts();

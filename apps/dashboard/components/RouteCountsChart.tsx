@@ -6,6 +6,7 @@ import {
   XAxis,
   YAxis,
   LabelList,
+  Tooltip,
 } from 'recharts';
 import {
   Card,
@@ -37,6 +38,27 @@ const chartConfig = {
     color: 'hsl(0 0% 100%)', // White
   },
 } satisfies ChartConfig;
+
+const CustomTooltip = ({
+  active,
+  payload,
+  label,
+}: {
+  active?: boolean;
+  payload?: any[];
+  label?: string;
+}) => {
+  if (active && payload?.length) {
+    const item = payload[0];
+    return (
+      <div className="rounded-md border bg-white p-2 shadow-sm text-sm">
+        <div className="font-semibold">Line {item.payload.name}</div>
+        <div>{item.value.toLocaleString()} delays</div>
+      </div>
+    );
+  }
+  return null;
+};
 
 export default function RouteCountsChart({ data }: RouteCountsChartProps) {
   // Only show the top 10 most delayed lines
@@ -84,6 +106,7 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
               )}
             />
             <XAxis type="number" hide />
+            <Tooltip content={<CustomTooltip />} />
             <Bar
               dataKey="value"
               fill={chartConfig.value.color}

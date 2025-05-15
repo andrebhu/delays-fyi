@@ -58,16 +58,18 @@ const CustomTooltip = ({
 };
 
 export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
+
+  console.log(data);
   return (
     <Card className="gap-2">
       <CardHeader>
-        <CardTitle>Daily Trends</CardTitle>
+        <CardTitle>Recent Trends</CardTitle>
         <CardDescription>
-          Subway delay counts over time, aggregated by day.
+          Subway delay counts over the last 30 days, aggregated by day.
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} style={{ height: '100%', width: '100%' }}>
+        <ChartContainer config={chartConfig} style={{ height: '300px', width: '100%' }}>
           <AreaChart
             data={data}
             margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
@@ -77,7 +79,7 @@ export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
               dataKey="date"
               tick={{ fill: '#6b7280', fontSize: 12 }}
               tickLine={false}
-              interval={0}
+              interval={2}
               axisLine={{ stroke: '#e5e7eb' }}
               angle={-45}
               textAnchor="end"
