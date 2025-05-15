@@ -1,6 +1,6 @@
 import { supabase, fetchRouteCounts } from '@/lib/supabase';
 import { Alert } from '@/types/alert';
-import DailyDelaysChart from '@/components/DailyDelaysChart';
+import DailyDelaysChart from '@/components/DelayTrendsChart';
 import LineIndicator from '@/components/LineIndicator';
 import RouteCountsChart from '@/components/RouteCountsChart';
 
@@ -66,6 +66,7 @@ export default async function MetricsPage() {
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
+
   const totalAlertsCount = await getTotalAlertsCount();
   const routeCounts = await fetchRouteCounts();
 
@@ -78,11 +79,11 @@ export default async function MetricsPage() {
     <main className="min-h-screen bg-gray-100">
       <div className="p-8">
         <div className="max-w-4xl mx-auto">
-          <section className="mb-4">
+          <section className="mb-12">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">Overview</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-lg font-medium text-gray-900">Total Alerts</h3>
                 <p className="text-3xl font-bold text-blue-600">{totalAlertsCount}</p>
@@ -96,16 +97,16 @@ export default async function MetricsPage() {
                 <p className="text-3xl font-bold text-blue-600">{mostCommonCause}</p>
               </div>
             </div>
-          </section>
-
-          <section className="mb-12">
             <RouteCountsChart data={routeCounts} />
           </section>
+
+          {/* <section className="mb-12">
+            <RouteCountsChart data={routeCounts} />
+          </section> */}
 
           <section className="mb-12">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">Trends</h2>
-              <span className="text-sm text-gray-500">Past 7 days</span>
             </div>
             <DailyDelaysChart data={chartData} />
           </section>

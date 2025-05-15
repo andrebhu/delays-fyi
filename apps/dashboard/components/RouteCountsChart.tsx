@@ -61,7 +61,7 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
         </CardDescription>
       </CardHeader>
       <CardContent className="overflow-hidden" style={{ maxHeight }}>
-        <ChartContainer config={chartConfig} style={{ height: chartHeight }}>
+        <ChartContainer config={chartConfig} style={{ height: chartHeight, width: '100%' }}>
           <BarChart
             data={topData}
             layout="vertical"
