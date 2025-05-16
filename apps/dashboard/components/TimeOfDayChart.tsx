@@ -75,7 +75,7 @@ export default function TimeOfDayChart({ data }: TimeOfDayChartProps) {
         <ChartContainer config={chartConfig} style={{ height: '300px', width: '100%' }}>
           <AreaChart
             data={data}
-            margin={{ top: 20, right: 20, left: 0, bottom: 40 }}
+            margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
           >
             <CartesianGrid strokeDasharray="2 2" stroke="#CBCBCB" />
             <XAxis
