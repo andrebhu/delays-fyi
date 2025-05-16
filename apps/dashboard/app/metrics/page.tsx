@@ -93,7 +93,7 @@ export default async function MetricsPage() {
   const mostDelayedRoute = routeCounts[0].route;
   
   // TODO: Hardcoded for now
-  const mostCommonCause = "Subway Car" 
+  const mostCommonCause = "Brakes"
 
   return (
     <main className="min-h-screen bg-gray-100">
