@@ -90,7 +90,7 @@ export default function TimeOfDayChart({ data }: TimeOfDayChartProps) {
               }}
               angle={-45}
               textAnchor="end"
-              interval={0} // Show all ticks
+              interval={1}
             />
             <YAxis
               tick={{ fill: '#6b7280', fontSize: 12 }}
