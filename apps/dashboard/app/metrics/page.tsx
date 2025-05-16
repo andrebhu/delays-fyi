@@ -6,7 +6,6 @@ import RouteCountsChart from '@/components/RouteCountsChart';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
