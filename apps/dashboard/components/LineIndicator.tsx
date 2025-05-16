@@ -10,7 +10,9 @@ const LINE_COLORS: Record<string, string> = {
   '4': '#00933C', // Green
   '5': '#00933C', // Green
   '6': '#00933C', // Green
+  '6X': '#00933C', // Green
   '7': '#B933AD', // Purple
+  '7X': '#B933AD', // Purple
   'A': '#0039A6', // Blue
   'B': '#FF6319', // Orange
   'C': '#0039A6', // Blue
@@ -25,6 +27,7 @@ const LINE_COLORS: Record<string, string> = {
   'Q': '#FCCC0A', // Yellow
   'R': '#FCCC0A', // Yellow
   'S': '#808183', // Dark Grey
+  'T': '#40E0D0', // Turqoise
   'W': '#FCCC0A', // Yellow
   'Z': '#996633', // Brown
 }

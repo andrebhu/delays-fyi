@@ -32,7 +32,7 @@ interface RouteCountsChartProps {
 const chartConfig = {
   value: {
     label: 'Delays',
-    color: 'hsl(221.2 83.2% 53.3%)', // Blue-600
+    color: 'oklch(62.3% 0.214 259.815)', // Blue-500
   },
   label: {
     color: 'hsl(0 0% 100%)', // White

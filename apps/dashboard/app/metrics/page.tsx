@@ -3,12 +3,19 @@ import { Alert } from '@/types/alert';
 import DailyDelaysChart from '@/components/DelayTrendsChart';
 import LineIndicator from '@/components/LineIndicator';
 import RouteCountsChart from '@/components/RouteCountsChart';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 
 async function getAlerts() {
   const today = new Date();
-  const thirtyDaysAgo = new Date();
-  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+  const thirtyTwoDaysAgo = new Date();
+  thirtyTwoDaysAgo.setDate(thirtyTwoDaysAgo.getDate() - 32);
   
   let allAlerts: Alert[] = [];
   let from = 0;
@@ -18,7 +25,7 @@ async function getAlerts() {
     const { data: alerts, error } = await supabase
       .from('alerts')
       .select('*')
-      .gte('last_seen_time', thirtyDaysAgo.toISOString())
+      .gte('last_seen_time', thirtyTwoDaysAgo.toISOString())
       .lte('last_seen_time', today.toISOString())
       .range(from, from + pageSize - 1);
 
@@ -40,7 +47,6 @@ async function getAlerts() {
     }
   }
 
-  console.log(`Fetched ${allAlerts.length} total alerts`);
   return allAlerts;
 }
 
@@ -103,12 +109,8 @@ export default async function MetricsPage() {
     });
   }
 
-  console.log('Date range:', startDate.toISOString(), 'to', endDate.toISOString());
-  console.log('Total alerts:', alerts.length);
-  console.log('Days with data:', Object.keys(dailyData).length);
-  console.log('Days in range:', allDates.length);
-
-  const chartData = allDates;
+  // Take only the last 30 days of data
+  const chartData = allDates.slice(-31);
 
   const totalAlertsCount = await getTotalAlertsCount();
   const routeCounts = await fetchRouteCounts();
@@ -116,7 +118,7 @@ export default async function MetricsPage() {
   const mostDelayedRoute = routeCounts[0].route;
   
   // TODO: Hardcoded for now
-  const mostCommonCause = "Brakes" 
+  const mostCommonCause = "Subway Car" 
 
   return (
     <main className="min-h-screen bg-gray-100">
@@ -127,25 +129,33 @@ export default async function MetricsPage() {
               <h2 className="text-2xl font-semibold">Overview</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-lg font-medium text-gray-900">Total Alerts</h3>
-                <p className="text-3xl font-bold text-blue-600">{totalAlertsCount}</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-lg font-medium text-gray-900">Most Delayed Line</h3>
-                <LineIndicator line={mostDelayedRoute} size="md" />
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-lg font-medium text-gray-900">Most Common Cause</h3>
-                <p className="text-3xl font-bold text-blue-600">{mostCommonCause}</p>
-              </div>
+              <Card className="gap-0">
+                <CardHeader>
+                  <CardTitle className="text-lg font-medium">Total Alerts</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-3xl font-bold text-blue-600">{totalAlertsCount}</p>
+                </CardContent>
+              </Card>
+              <Card className="gap-0">
+                <CardHeader>
+                  <CardTitle className="text-lg font-medium">Most Delayed Line</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <LineIndicator line={mostDelayedRoute} size="md" />
+                </CardContent>
+              </Card>
+              <Card className="gap-0">
+                <CardHeader>
+                  <CardTitle className="text-lg font-medium">Most Common Cause</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-3xl font-bold text-blue-600">{mostCommonCause}</p>
+                </CardContent>
+              </Card>
             </div>
             <RouteCountsChart data={routeCounts} />
           </section>
-
-          {/* <section className="mb-12">
-            <RouteCountsChart data={routeCounts} />
-          </section> */}
 
           <section className="mb-12">
             <div className="flex justify-between items-center mb-4">

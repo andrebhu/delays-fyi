@@ -30,7 +30,7 @@ interface DailyDelaysChartProps {
 const chartConfig = {
   value: {
     label: 'Delays',
-    color: 'hsl(221.2 83.2% 53.3%)', // Blue-600
+    color: 'oklch(62.3% 0.214 259.815)', // Blue-500
   },
   label: {
     color: 'hsl(0 0% 100%)', // White
@@ -59,7 +59,6 @@ const CustomTooltip = ({
 
 export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
 
-  console.log(data);
   return (
     <Card className="gap-2">
       <CardHeader>
@@ -74,12 +73,12 @@ export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
             data={data}
             margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#CBCBCB" />
+            <CartesianGrid strokeDasharray="2 2" stroke="#CBCBCB" />
             <XAxis
               dataKey="date"
               tick={{ fill: '#6b7280', fontSize: 12 }}
               tickLine={false}
-              interval={2}
+              interval={1}
               axisLine={{ stroke: '#e5e7eb' }}
               angle={-45}
               textAnchor="end"
