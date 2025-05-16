@@ -1,5 +1,4 @@
-import { supabase, fetchRouteCounts, getTotalAlertsCount, getAlerts } from '@/lib/supabase';
-import { Alert } from '@/types/alert';
+import { fetchRouteCounts, getTotalAlertsCount, getAlerts } from '@/lib/supabase';
 import DailyDelaysChart from '@/components/DelayTrendsChart';
 import LineIndicator from '@/components/LineIndicator';
 import RouteCountsChart from '@/components/RouteCountsChart';
