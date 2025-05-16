@@ -1,8 +1,9 @@
-import { supabase, fetchRouteCounts } from '@/lib/supabase';
+import { supabase, fetchRouteCounts, getTotalAlertsCount, getAlerts } from '@/lib/supabase';
 import { Alert } from '@/types/alert';
 import DailyDelaysChart from '@/components/DelayTrendsChart';
 import LineIndicator from '@/components/LineIndicator';
 import RouteCountsChart from '@/components/RouteCountsChart';
+import TimeOfDayChart from '@/components/TimeOfDayChart';
 import {
   Card,
   CardContent,
@@ -10,62 +11,10 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-
-async function getAlerts() {
-  const today = new Date();
-  const thirtyTwoDaysAgo = new Date();
-  thirtyTwoDaysAgo.setDate(thirtyTwoDaysAgo.getDate() - 32);
-  
-  let allAlerts: Alert[] = [];
-  let from = 0;
-  const pageSize = 1000;
-  
-  while (true) {
-    const { data: alerts, error } = await supabase
-      .from('alerts')
-      .select('*')
-      .gte('last_seen_time', thirtyTwoDaysAgo.toISOString())
-      .lte('last_seen_time', today.toISOString())
-      .range(from, from + pageSize - 1);
-
-    if (error) {
-      console.error('Error fetching alerts:', error);
-      return [];
-    }
-
-    if (!alerts || alerts.length === 0) {
-      break;
-    }
-
-    allAlerts = [...allAlerts, ...alerts];
-    from += pageSize;
-
-    // If we got less than pageSize results, we've reached the end
-    if (alerts.length < pageSize) {
-      break;
-    }
-  }
-
-  return allAlerts;
-}
-
-async function getTotalAlertsCount() {
-  const { count, error } = await supabase
-    .from('alerts')
-    .select('*', { count: 'exact', head: true });
-
-  if (error) {
-    console.error('Error fetching total alerts count:', error);
-    return 0;
-  }
-
-  return count || 0;
-}
-
 export default async function MetricsPage() {
   const alerts = await getAlerts();
 
-  // Calculate daily delay counts and average duration
+  // Calculate daily delay counts
   const dailyData = alerts.reduce((acc, alert) => {
     const date = new Date(alert.last_seen_time + 'Z');
     const dateStr = date.toLocaleDateString('en-US', {
@@ -86,6 +35,34 @@ export default async function MetricsPage() {
     
     return acc;
   }, {} as Record<string, { count: number; date: Date }>);
+
+  // Calculate time of day distribution
+  const timeOfDayData = alerts.reduce((acc, alert) => {
+    const date = new Date(alert.start_time + 'Z');
+    const hour = date.getUTCHours();
+    
+    if (!acc[hour]) {
+      acc[hour] = {
+        count: 0,
+        days: new Set()
+      };
+    }
+    
+    // Add the date to the set of days for this hour
+    const dateKey = date.toISOString().split('T')[0];
+    acc[hour].days.add(dateKey);
+    acc[hour].count += 1;
+    
+    return acc;
+  }, {} as Record<number, { count: number; days: Set<string> }>);
+
+  // Convert to array and calculate averages
+  const timeOfDayChartData = Object.entries(timeOfDayData)
+    .map(([hour, data]) => ({
+      hour: parseInt(hour),
+      count: data.count / data.days.size // Average per day
+    }))
+    .sort((a, b) => a.hour - b.hour);
 
   // Get the date range
   const dates = Object.values(dailyData).map(d => d.date);
@@ -160,7 +137,10 @@ export default async function MetricsPage() {
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-semibold">Trends</h2>
             </div>
-            <DailyDelaysChart data={chartData} />
+            <div className="space-y-4">
+              <DailyDelaysChart data={chartData} />
+              <TimeOfDayChart data={timeOfDayChartData} />
+            </div>
           </section>
         </div>
       </div>
