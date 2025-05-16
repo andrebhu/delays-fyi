@@ -66,7 +66,7 @@ export default function TimeOfDayChart({ data }: TimeOfDayChartProps) {
   return (
     <Card className="gap-2">
       <CardHeader>
-        <CardTitle>Time of Day Distribution</CardTitle>
+        <CardTitle>Hourly Averages</CardTitle>
         <CardDescription>
           Average number of delays by hour of day over the last 30 days.
         </CardDescription>

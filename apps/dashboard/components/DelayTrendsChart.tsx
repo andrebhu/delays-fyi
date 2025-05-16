@@ -62,7 +62,7 @@ export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
   return (
     <Card className="gap-2">
       <CardHeader>
-        <CardTitle>Recent Trends</CardTitle>
+        <CardTitle>Daily Totals</CardTitle>
         <CardDescription>
           Subway delay counts by day over the last 30 days.
         </CardDescription>
