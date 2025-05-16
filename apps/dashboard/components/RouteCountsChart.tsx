@@ -84,7 +84,7 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
       <CardHeader>
         <CardTitle>Most Delayed</CardTitle>
         <CardDescription>
-          Top 10 most delayed subway lines based on historical alerts.
+          Top 10 most delayed subway lines based on historical alerts since April 2025.
         </CardDescription>
       </CardHeader>
       <CardContent className="overflow-hidden" style={{ maxHeight }}>
