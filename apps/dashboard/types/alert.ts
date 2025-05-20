@@ -4,4 +4,5 @@ export interface Alert {
   start_time: string
   last_seen_time: string
   description: string
+  cause: string
 } 

@@ -47,7 +47,7 @@ export async function getAlerts() {
   while (true) {
     const { data: alerts, error } = await supabase
       .from('alerts')
-      .select('alert_id, routes, start_time, last_seen_time, description')
+      .select('alert_id, routes, start_time, last_seen_time, description, cause')
       .gte('last_seen_time', thirtyTwoDaysAgo.toISOString())
       .lte('last_seen_time', today.toISOString())
       .range(from, from + pageSize - 1);
