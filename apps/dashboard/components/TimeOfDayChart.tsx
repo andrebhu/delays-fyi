@@ -82,8 +82,7 @@ export default function TimeOfDayChart({ data }: TimeOfDayChartProps) {
       <CardHeader>
         <CardTitle>Hourly Averages</CardTitle>
         <CardDescription>
-          Average number of delays by hour of day over the last 30 days,
-          split between weekdays and weekends.
+          Average number of delays by hour of day over the last 30 days.
         </CardDescription>
       </CardHeader>
       <CardContent>
