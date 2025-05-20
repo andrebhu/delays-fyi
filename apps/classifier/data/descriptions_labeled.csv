@@ -13,11 +13,11 @@ subway_cars,Southbound [C] trains are running with delays after we moved a train
 subway_cars,Southbound [C] trains are delayed while we investigate why a train's brakes activated at Shepherd Av.
 subway_cars,[7] trains are running with delays in both directions after we moved a train that had its brakes activated at 52 St.
 tracks,Southbound [A][C][E][F] trains are running with delays after we addressed a switch problem near Canal St.
-signal,Southbound [R] trains are running with delays while we address a signal problem at 36 St (BKLYN).
-signal,Southbound [A][C][E] trains are delayed while our crews address a signal malfunction near Canal St.
+signals,Southbound [R] trains are running with delays while we address a signal problem at 36 St (BKLYN).
+signals,Southbound [A][C][E] trains are delayed while our crews address a signal malfunction near Canal St.
 other,Northbound [6] trains are running with delays after we conducted an investigation at Spring St.
 other,Northbound [6] trains are delayed while we conduct an investigation at Spring St.
-signal,Southbound [R] trains are delayed while we address a signal problem at 36 St (BKLYN).
+signals,Southbound [R] trains are delayed while we address a signal problem at 36 St (BKLYN).
 subway_cars,Hudson Yards-bound [7] trains are delayed while we investigate why a train's brakes activated at 52 St.
 tracks,[7] trains are running with delays in both directions after we addressed a network communication issue along the line.
 other,Southbound [4][5] trains are running with delays after we conducted an investigation at 59 St.
@@ -44,7 +44,7 @@ police_medical_activity,Southbound [A] trains are running with delays after NYPD
 subway_cars,Southbound [2] trains are running with delays after we moved a train that had its brakes activated near Wakefield-241 St.
 police_medical_activity,[A] trains are running with delays in both directions after NYPD responded to an unauthorized person on the tracks near Hoyt-Schermerhorn Sts.
 subway_cars,Northbound [D][Q] trains are running with delays after we removed a train with a mechanical problem from service at DeKalb Av.
-signal,Northbound [1][2][3] trains are running with delays after we addressed a signal problem at 96 St.
+signals,Northbound [1][2][3] trains are running with delays after we addressed a signal problem at 96 St.
 subway_cars,Southbound [2] trains are delayed while we investigate what caused a train's brakes to activate near Wakefield-241 St.
 police_medical_activity,[A] trains are delayed in both directions while NYPD responds to an unauthorized person on the tracks near Hoyt-Schermerhorn Sts.
 police_medical_activity,Manhattan-bound [A] trains are delayed while we investigate a report of an unauthorized person on the tracks near Hoyt-Schermerhorn Sts.
@@ -74,10 +74,10 @@ other,"Northbound [Q] will run on the [D] from DeKalb Av to Broadway-Lafayette S
 other,"Northbound [Q] will run on the [D] from DeKalb Av to Broadway-Lafayette St, on the [F] from Broadway-Lafayette St to 63 St, and then on the [Q] to 96 St."
 tracks,[N][R] trains are running with delays in both directions after FDNY extinguished a track fire near Lexington Av/59 St.
 subway_cars,Northbound [Q] trains are delayed while we investigate what activated a train's brakes being activated near 14 St-Union Sq.
-signal,[G] trains are running with delays in both directions while we address a signal problem at Nassau Av.
-signal,[N][R] trains are running with delays in both directions after we addressed a signal problem near 5 Av/59 St.
-signal,Court Sq-bound [G] trains are delayed while we address a signal problem at Nassau Av.
-signal,[N][R] trains are running with delays in both directions while we address a signal problem near 5 Av/59 St.
+signals,[G] trains are running with delays in both directions while we address a signal problem at Nassau Av.
+signals,[N][R] trains are running with delays in both directions after we addressed a signal problem near 5 Av/59 St.
+signals,Court Sq-bound [G] trains are delayed while we address a signal problem at Nassau Av.
+signals,[N][R] trains are running with delays in both directions while we address a signal problem near 5 Av/59 St.
 tracks,[N][R] trains are running with severe delays in both directions after FDNY extinguished a track fire near Lexington Av/59 St.
 tracks,[N][R] train service is severely disrupted in Manhattan while FDNY responds to a track fire near Lexington Av/59 St.
 other,[R] trains are running via the [F] between 36 St and Lexington Ave/63 St and then via the [Q] to/from 57 St in both directions. [N] trains are delayed.
@@ -162,10 +162,10 @@ stations_structures,Jamaica Center-Parsons/Archer-bound [J] trains are running w
 other,Northbound [A] trains are running express from Canal St  to 59 St-Columbus Circle. Northbound [E] trains are running with delays.
 police_medical_activity,Southbound [4] trains are delayed while we remove a train from service at 183 St while we request NYPD assistance at that station.
 tracks,Southbound [3] trains are running with delays after we replaced a rail near 34 St-Penn Station.
-signal,Northbound [F]  trains are running with delays while we address a signal malfunction near 2 Av.
-signal,Northbound [D][N][R] trains are running with delays after our crews addressed a signal malfunction at 4 Av-9 St.
-signal,Northbound [D][N][R] trains are delayed while our crews address a signal malfunction at 4 Av-9 St.
-signal,Northbound [D][N][R] trains are delayed while our crews address a signal malfunction at 9 Av.
+signals,Northbound [F]  trains are running with delays while we address a signal malfunction near 2 Av.
+signals,Northbound [D][N][R] trains are running with delays after our crews addressed a signal malfunction at 4 Av-9 St.
+signals,Northbound [D][N][R] trains are delayed while our crews address a signal malfunction at 4 Av-9 St.
+signals,Northbound [D][N][R] trains are delayed while our crews address a signal malfunction at 9 Av.
 subway_cars,Northbound [4][6] trains are running with delays after we removed a train car in need of cleaning from service at Bleecker St.
 subway_cars,[N] trains are running with delays in both directions after we moved a stalled work train near 86 St.
 subway_cars,Southbound [D] trains are running with delays after we removed a train with a mechanical problem from service at 125 St.
@@ -276,11 +276,11 @@ police_medical_activity,Southbound [6] trains are running with delays after NYPD
 police_medical_activity,Southbound [F] trains are running with delays after EMS assisted someone in need and we removed a train from service at 21 St-Queensbridge.
 other,[E] trains are delayed in both directions while a work train moves through the area near Queens Plaza.
 other,Southbound [6] trains are running express from Parkchester to Hunts Point Av.
-signal,[D] trains are running with delays in both directions after we addressed a signal problem at Coney Island-Stillwell Av.
+signals,[D] trains are running with delays in both directions after we addressed a signal problem at Coney Island-Stillwell Av.
 police_medical_activity,Southbound [2][4][5][6] trains are running with delays after emergency teams responded to a person who was struck by a train near 86 St.
 subway_cars,Southbound [6] trains are running with delays after we investigated why a train's brakes activated at Parkchester.
 police_medical_activity,Southbound [6] trains are delayed while we request NYPD assistance for a person being disruptive on a train at Whitlock Av.
-signal,[D] trains are delayed in both directions while we address a signal problem at Coney Island-Stillwell Av.
+signals,[D] trains are delayed in both directions while we address a signal problem at Coney Island-Stillwell Av.
 other,Southbound [4][5] local between 125 St and 42 St. Last stop on some southbound [4] trains is 86 St. Southbound [5] via [2] 149 St (GC) to Chambers St.
 subway_cars,Southbound [6] trains are delayed while we investigate why a train's brakes activated at Parkchester.
 other,Southbound [F] trains are rerouted via the [M] line from Queens Plaza to 47-50 Sts-Rockefeller Ctr.
@@ -332,7 +332,7 @@ other,There is no [1][3] service between 42 St and 96 St in both directions. [2]
 other,There is no [1][3] service between 42 St and 96 St in both directions. [2] trains are running via the [5] in both directions between Nevins St and 149 St (GC)
 police_medical_activity,[1] trains are bypassing 86 St in both directions while NYPD conducts an investigation at that station.
 subway_cars,Uptown [B][D] trains are running with delays after we removed a train with a mechanical problem from service at 34 St-Herald Sq.
-signal,Northbound [6] trains are running with delays while we address an ongoing signal problem at Parkchester.
+signals,Northbound [6] trains are running with delays while we address an ongoing signal problem at Parkchester.
 other,Uptown [B]  trains are running express from 59 St-Columbus Circle to 145 St.
 police_medical_activity,Southbound [4][5] trains are running with delays after we requested EMS assistance for someone on a train at Bowling Green.
 subway_cars,Southbound [2][5] trains are running with delays after we investigated why a train's brakes activated at Church Av.
@@ -341,7 +341,7 @@ tracks,[A][C] trains are running with delays in both directions after we were ab
 subway_cars,Uptown and Bronx-bound [B][D] trains are delayed while we remove a train with a mechanical problem from service at 34 St-Herald Sq.
 tracks,[A][C] trains are running with delays in both directions after we were able to move track switches near Hoyt-Schermerhorn Sts.
 tracks,[D][N] trains are running with delays in both directions.  We're performing track maintenance in Brooklyn.
-signal,Uptown and Bronx-bound [B] trains are running with delays after we addressed a signal problem near 59 St-Columbus Circle.
+signals,Uptown and Bronx-bound [B] trains are running with delays after we addressed a signal problem near 59 St-Columbus Circle.
 other,[A] trains are running local in both directions between Hoyt-Schermerhorn Sts and Broadway Junction. Board [A] trains on the lower level at Nostrand Av.
 subway_cars,Southbound [A][C][E] trains are running with delays after we addressed a mechanical problem on at train at Spring St.
 subway_cars,Southbound [N][W] trains are running with delays after we addressed a door problem on a train at Astoria Blvd.
@@ -354,12 +354,12 @@ tracks,[D][N] trains are running with delays in both directions.  We're performi
 tracks,[D][N] trains are running with delays in both directions.  We're performing track maintenance in Brooklyn.
 subway_cars,Southbound [2] trains are delayed while we investigate why a train's brakes activated near Nereid Av.
 subway_cars,Southbound [2][5] trains are with delays after we investigated why a train's brakes activated at West Farms Sq-E Tremont Av.
-signal,[6] trains are running with delays in both directions after we addressed a signal problem at Parkchester.
+signals,[6] trains are running with delays in both directions after we addressed a signal problem at Parkchester.
 subway_cars,Metropolitan Ave-bound [M] and Jamaica-bound [J] trains are running with delays after we investigated what caused a train's brakes to activate at Marcy Av.
 subway_cars,Northbound [N][W] trains are running with delays after we moved a train that had its brakes activated at 36 Av.
 subway_cars,[7] trains are running with delays in both directions after we addressed a mechanical problem on a train at Queensboro Plaza.
 subway_cars,Southbound [6] trains are running with delays after we moved a train that had its brakes activated at 110 St.
-signal,Northbound [6] trains are running with delays while we address a signal problem near Parkchester.
+signals,Northbound [6] trains are running with delays while we address a signal problem near Parkchester.
 other,Southbound [E] [F] trains are running with delays after we requested FDNY assistance for a report of smoke near Kew Gardens-Union Tpke.
 police_medical_activity,Northbound [2][3] trains are running with delays after we removed a train from service to request EMS assistance for someone at 72 St.
 police_medical_activity,Main St-bound [7] trains are running with delays we investigated a report of someone being disruptive on a train at 69 St.
@@ -384,7 +384,7 @@ subway_cars,Northbound [6] trains are running with delays after we removed a tra
 subway_cars,Northbound [6] trains are delayed while we remove a train with a mechanical problem from service at 86 St.
 subway_cars,Northbound [6] trains are running with delays after we removed a train with a mechanical problem from service at Brooklyn Bridge-City Hall.
 police_medical_activity,Southbound [2][3][4][5] trains are running with delays after NYPD responded to someone being disruptive on a train at Bergen St.
-signal,[A] trains are running with delays in both directions after we addressed a signal malfunction near 80 St.
+signals,[A] trains are running with delays in both directions after we addressed a signal malfunction near 80 St.
 police_medical_activity,Northbound [4][5] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at 14 St-Union Sq.
 police_medical_activity,Southbound [D][N] trains are running with delays after EMS assisted a person in need on a train at 36 St.
 subway_cars,Southbound [E] and Metropolitan-bound [M] trains are running with delays after we moved a train that had its brakes activated at Lexington Av/53 St.
@@ -398,7 +398,7 @@ police_medical_activity,Southbound [F] and Church Av-bound [G] trains are runnin
 tracks,[5] trains are running with delays in both directions after we removed debris from the tracks near Gun Hill Rd.
 subway_cars,Northbound [6] trains are delayed while we address a door problem on a train at Buhre Av.
 other,Southbound [1] trains are running express from 72 St to Times Sq-42 St.
-signal,Canarsie-Rockaway Pkwy-bound [L] trains are running with delays while we address a signal problem at Atlantic Av.
+signals,Canarsie-Rockaway Pkwy-bound [L] trains are running with delays while we address a signal problem at Atlantic Av.
 tracks,Northbound [N][W] trains are delayed while we address a switch malfunction at Astoria-Ditmars Blvd.
 tracks,Northbound [N][W] trains are delayed while we address a switch malfunction at Astoria-Ditmars Blvd.
 other,"Southbound [D] rerouted via [C] line from 59 St-Columbus Circle to Jay St-MetroTech, then via [F] line to Coney Island.  Southbound [B] trains are delayed."
@@ -472,19 +472,19 @@ tracks,Downtown [D][Q][R] trains are running with delays after we conducted trac
 tracks,Northbound [1] trains are running with delays after we conducted track maintenance near 137 St-City College.
 other,Stillwell Av-bound [Q] trains via the [R] line from Canal St to DeKalb Av.  Stillwell Av-bound [D] trains are express from Grand St to Atlantic Av.
 other,Some 14 St-Union Sq-bound [L] trains will end at Bedford Av.  [L] trains are running with delays in both directions.
-signal,Southbound [F] trains are running with delays after we addressed a signal problem near York St.
-signal,Northbound [6] trains are running at slower speeds in the Bronx while we address a signal problem near Westchester Sq-E Tremont Av.
-signal,Southbound [F] trains are delayed while we address a signal problem near York St.
+signals,Southbound [F] trains are running with delays after we addressed a signal problem near York St.
+signals,Northbound [6] trains are running at slower speeds in the Bronx while we address a signal problem near Westchester Sq-E Tremont Av.
+signals,Southbound [F] trains are delayed while we address a signal problem near York St.
 subway_cars,[A] trains are running with delays in both directions after we addressed a door problem on a train at Inwood-207 St.
-signal,Southbound [2][3] are running with delays after we addressed a signal problem at Times Sq-42 St.
+signals,Southbound [2][3] are running with delays after we addressed a signal problem at Times Sq-42 St.
 subway_cars,Northbound [A] trains are delayed while we address a door problem on a train at Inwood-207 St.
 subway_cars,[L] trains are running with delays in both directions after we moved a train that had its brakes activated near Canarsie-Rockaway Pkwy.
 police_medical_activity,Southbound [6] trains are running with delays after an NYPD investigation at 14 St-Union Sq concluded.
 subway_cars,[L] trains are running with delays in both directions after we moved a train that had its brakes activated near Canarsie-Rockaway Pkwy.
 subway_cars,[L] trains are delayed in both directions while we investigate why a train's brakes activated near Canarsie-Rockaway Pkwy.
-signal,[N][R][W] trains are running with delays in both directions after we addressed a signal problem at Queensboro Plaza.
-signal,Northbound [N][R][W] trains are delayed while we address a signal problem at Queensboro Plaza.
-signal,Northbound [N][W] trains are delayed while we address a signal problem at Queensboro Plaza.
+signals,[N][R][W] trains are running with delays in both directions after we addressed a signal problem at Queensboro Plaza.
+signals,Northbound [N][R][W] trains are delayed while we address a signal problem at Queensboro Plaza.
+signals,Northbound [N][W] trains are delayed while we address a signal problem at Queensboro Plaza.
 subway_cars,Northbound [C][E] trains are running with delays after we removed a train with a mechanical problem from service at 42 St-Port Authority Bus Terminal.
 subway_cars,Southbound [C][E] trains are delayed while we investigate what activated a train's brakes at 42 St-Port Authority Bus Terminal.
 police_medical_activity,[R] trains are running with delays entering/leaving Bay Ridge-95 St after EMS responded for someone in need on a train at that station.
@@ -512,7 +512,7 @@ other,Southbound [1] trains are running express from Times Sq-42 St to Chambers 
 other,Southbound [1] trains are running express from Times Sq-42 St to Chambers St.  Southbound [2] trains are running via [5] from 149 St G.C to Nevins St.
 subway_cars,Southbound [1] trains are running express from Times Sq-42 St to Chambers St while we investigate why a train's brakes were activated near 14 St.
 subway_cars,Southbound [D] trains are running with delays after we moved a train that had its brakes activated at 18 Av.
-signal,8 Av-bound [L] trains are running at slower speeds near Atlantic Av while we address a signal problem in the area.
+signals,8 Av-bound [L] trains are running at slower speeds near Atlantic Av while we address a signal problem in the area.
 police_medical_activity,Southbound [2][3] trains are running with delays after NYPD conducted an investigation at Fulton St.
 other,Southbound [4] trains are running with delays after we conducted planned work in the Bronx.
 subway_cars,Southbound [A][C] trains are running with delays after we moved a train that had its brakes activated at Lafayette Av.
@@ -592,7 +592,7 @@ police_medical_activity,Northbound [2] trains are delayed while we request EMS i
 subway_cars,Jamaica Center-bound [E] and Forest Hills-bound [M] trains are running with delays after we moved a train that had its brakes activated at 5 Av/53 St.
 subway_cars,Jamaica Center-bound [E] and Forest Hills-bound [M] trains are delayed while we investigate why a train's brakes activated at 5 Av/53 St.
 police_medical_activity,Southbound [4][5] trains are running local from 125 St to Grand Central-42 St while we request EMS for someone in need on a train at 86 St.
-signal,Southbound [C] trains are running with delays while we address a signal problem near Clinton-Washington Avs.
+signals,Southbound [C] trains are running with delays while we address a signal problem near Clinton-Washington Avs.
 subway_cars,Northbound [6] trains are running with delays after we addressed a mechanical problem on a train at Buhre Av.
 police_medical_activity,Northbound [F] trains are running with delays after we requested EMS for someone in need on a train at Kew Gardens-Union Tpke.
 police_medical_activity,Northbound [F] trains are delayed while we request EMS for someone in need on a train at Kew Gardens-Union Tpke.
@@ -652,18 +652,18 @@ police_medical_activity,[1] trains are running with delays in both directions af
 police_medical_activity,[1] trains are running with delays in both directions while we request NYPD assistance for an unauthorized person on the tracks near 28 St.
 subway_cars,Southbound [2][3] trains are running local from 34 St-Penn Station to 14 St while we address a door problem on a train at 34 St-Penn Station.
 subway_cars,Northbound [5] trains are running with delays after we moved a train that had its brakes activated at Gun Hill Rd.
-signal,Northbound [N][Q] trains are running with delays while we address a signal problem on the Manhattan Bridge.
+signals,Northbound [N][Q] trains are running with delays while we address a signal problem on the Manhattan Bridge.
 police_medical_activity,[L] trains are running with delays in both directions after emergency teams responded to someone who was struck by a train at 8 Av.
 police_medical_activity,[L] trains are delayed entering/leaving 8 Av while emergency teams respond to someone who was struck by a train at that station.
 police_medical_activity,Jamaica-bound [J] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at Delancey St-Essex St.
 police_medical_activity,Jamaica Center-Parsons/Archer-bound [J] trains are delayed while we request NYPD assistance for someone being disruptive on a train at Delancey St-Essex St.
 subway_cars,Northbound [4] trains are running with delays after we moved a train with a door problem at Saratoga Av.
 tracks,Southbound [4] trains are running with delays after we replaced a rail near Nostrand Av.
-signal,Northbound [1][2] trains are running with delays after we addressed a signal malfunction at 66 St-Lincoln Center.
+signals,Northbound [1][2] trains are running with delays after we addressed a signal malfunction at 66 St-Lincoln Center.
 police_medical_activity,[J] trains are running with delays in both directions after emergency teams responded to someone who was struck by a train at Cleveland St.
 subway_cars,Northbound [F][R] trains are running with delays after we removed a train in need of cleaning from service at 21 St-Queensbridge.
 police_medical_activity,[1] trains are running with delays in both directions after we investigated a report of an unauthorized person on the tracks at 191 St.
-signal,[H] trains are running with delays after we addressed a signal malfunction near Beach 90 St.
+signals,[H] trains are running with delays after we addressed a signal malfunction near Beach 90 St.
 subway_cars,Northbound [F][R] trains are delayed while we remove a train in need of cleaning from service at 21 St-Queensbridge.
 police_medical_activity,Southbound [2][3] trains are running with delays after EMS responded to someone in need on a train at 34 St-Penn Station.
 police_medical_activity,Broad St-bound [J] trains are delayed while emergency teams respond to someone who was struck by a train at Cleveland St.
@@ -689,7 +689,7 @@ subway_cars,Southbound [2] trains are delayed while we investigate why a train's
 subway_cars,Southbound [1] trains are running with delays after we addressed a mechanical problem on a train at 238 St.
 other,Northbound [C] trains are running express from Euclid Av to Hoyt-Schermerhorn Sts.
 subway_cars,Northbound [C] trains are delayed while we investigate why a train's brakes activated at Clinton-Washington Avs.
-signal,Northbound [A][C] trains are running with delays after we addressed a signal problem near Canal St.
+signals,Northbound [A][C] trains are running with delays after we addressed a signal problem near Canal St.
 police_medical_activity,Southbound [A][D] trains are running with delays after EMS responded to someone in need of medical assistance on a train at 125 St.
 subway_cars,Southbound [D] trains are running with delays after we moved a work train that had its brakes activated at W 4 St-Wash Sq.
 other,Southbound [A][D] trains are running local from 125 St to 86 St.
@@ -826,7 +826,7 @@ other,71 Av-bound [M] and [R] trains in both directions are running with delays 
 tracks,[2][3][4] trains are running with delays in both directions after FDNY extinguished a track fire at Nevins St.
 subway_cars,34 St-Hudson Yards-bound [7] trains are running with delays after we moved a train that had its brakes activated near 40 St-Lowery St.
 police_medical_activity,Northbound [4] trains are running with delays after NYPD responded to a person being disruptive on a train at 167 St.
-signal,Canarsie-Rockaway Pkwy-bound [L] trains are running with delays while we address a signal malfunction at Atlantic Av.
+signals,Canarsie-Rockaway Pkwy-bound [L] trains are running with delays while we address a signal malfunction at Atlantic Av.
 police_medical_activity,Southbound [3][4] trains are running with delays after NYPD responded to a person being disruptive on a train at Crown Hts-Utica Av.
 tracks,[2][3][4][5] trains are delayed in both directions while we request FDNY to respond to a report of a track fire at Nevins St.
 police_medical_activity,Southbound [F] trains are delayed while NYPD responds to someone in need on a train at Jackson Hts-Roosevelt Av.
@@ -896,13 +896,13 @@ tracks,Southbound [F]  and Middle Village-Metropolitan Av-bound [M] trains are r
 police_medical_activity,Northbound [A] trains are delayed while we request EMS for someone in need of medical assistance on a train at 104 St.
 police_medical_activity,Northbound [D] trains are running with delays after we investigated a report of people being disruptive on a train at 25 Av.
 police_medical_activity,Southbound [6] trains are running with delays after NYPD responded to someone being disruptive at 86 St.
-signal,8 Av-bound [L] trains are running with delays after we corrected a signal malfunction near Canarsie-Rockaway Pkwy.
+signals,8 Av-bound [L] trains are running with delays after we corrected a signal malfunction near Canarsie-Rockaway Pkwy.
 tracks,Southbound [F]  and Middle Village-Metropolitan Av-bound [M] trains are running with delays while we address a switch problem near Forest Hills-71 Av.
 tracks,Southbound [E][F][R] and Middle Village-Metropolitan Av-bound [M] trains are running with delays while we address a switch problem near Forest Hills-71 Av.
-signal,Northbound [A] trains are running with delays after we addressed a signal problem near 88 St.
+signals,Northbound [A] trains are running with delays after we addressed a signal problem near 88 St.
 other,Southbound [6] trains are running with delays after we conducted an investigation at 103 St.
-signal,Northbound [A] trains are running with delays while we address a signal problem near 88 St.
-signal,8 Av-bound [L] trains are running with delays while we work to correct a signal malfunction near Canarsie-Rockaway Pkwy.
+signals,Northbound [A] trains are running with delays while we address a signal problem near 88 St.
+signals,8 Av-bound [L] trains are running with delays while we work to correct a signal malfunction near Canarsie-Rockaway Pkwy.
 subway_cars,8 Av-bound [L] trains are running with delays after we removed a train in need of cleaning from service at Atlantic Av.
 subway_cars,8 Av-bound [L] trains are delayed while we remove a train in need of cleaning from service at Atlantic Av.
 police_medical_activity,Southbound [4] trains are running with delays after EMS responded to someone in need of medical assistance on a train at Crown Hts-Utica Av.
@@ -935,7 +935,7 @@ subway_cars,Southbound [4][5] trains are delayed while we are unable to move a t
 subway_cars,Northbound [C][E] trains are delayed while we address a train with a mechanical problem at 23 St.
 police_medical_activity,Jamaica Center-Parsons/Archer-bound [J] trains are delayed while we request NYPD assistance for someone disruptive on a train at Myrtle Av.
 police_medical_activity,Northbound [2][3] trains are running with delays after NYPD conducted an investigation at Atlantic Av-Barclays Ctr.
-signal,8 Av-bound [L] trains are running with delays while we address a signal problem at Morgan Av.
+signals,8 Av-bound [L] trains are running with delays while we address a signal problem at Morgan Av.
 tracks,[E][F][M][R] trains are running with severe delays in both directions after we addressed a switch problem at Forest Hills-71 Av.
 police_medical_activity,Northbound [4][5][6] trains are running with delays after NYPD responded to someone being disruptive on a train at 14 St-Union Sq.
 police_medical_activity,Northbound [2][3] trains are delayed while NYPD conducts an investigation at Atlantic Av-Barclays Ctr.
@@ -947,35 +947,35 @@ subway_cars,8 Av-bound [L] trains are running with delays after we removed a tra
 subway_cars,8 Av-bound [L] trains are delayed while we remove a train with a mechanical problem from service at Bedford Av.
 police_medical_activity,[2] [3]  trains are running with delays in both directions after EMS assisted someone in need on a train at Park Place.
 tracks,Northbound [4][5][6] trains are running with delays after FDNY extinguished a track fire near Grand Central-42 St.
-signal,Southbound [A][C] trains are running with delays while we address a signal problem in the tunnel between Manhattan and Brooklyn.
+signals,Southbound [A][C] trains are running with delays while we address a signal problem in the tunnel between Manhattan and Brooklyn.
 subway_cars,Northbound [F] and Court Sq-bound [G] trains are running with delays after we moved a train that had its brakes activated at Church Av.
 police_medical_activity,Northbound [1] trains are delayed while we request EMS assistance for someone in need on a train at 59 St-Columbus Circle.
 subway_cars,Northbound [6][6X] trains are running with delays after we addressed a door problem on a train at 59 St.
-signal,Southbound [A][C] trains are delayed while we address a signal problem in the tunnel between Manhattan and Brooklyn.
+signals,Southbound [A][C] trains are delayed while we address a signal problem in the tunnel between Manhattan and Brooklyn.
 tracks,Jamaica-bound [E][F] trains are delayed. [M][R] trains are delayed in both directions.  We are addressing a switch problem at Forest Hills-71 Av.
 subway_cars,Southbound [1] trains are running with delays after we removed a train with a door problem from service at 207 St.
-signal,Southbound [B][D] trains are running with delays after we addressed a signal problem near 42 St-Bryant Pk.
+signals,Southbound [B][D] trains are running with delays after we addressed a signal problem near 42 St-Bryant Pk.
 police_medical_activity,[2] [3] [4][5] trains are running with delays in both directions after EMS assisted someone in need on a train at Park Place.
 other,Northbound [4][5] trains are running on the local track from Brooklyn Bridge-City Hall to 125 St.
-signal,Southbound [B][D] trains are running at slower speeds near 42 St-Bryant Pk. We are addressing a signal problem near that station.
-signal,[A][C] trains are running with delays in both directions after we addressed a signal problem near Fulton St.
-signal,Northbound [N][Q][R][W] trains are running with delays after we addressed a signal problem near 34 St-Herald Sq.
+signals,Southbound [B][D] trains are running at slower speeds near 42 St-Bryant Pk. We are addressing a signal problem near that station.
+signals,[A][C] trains are running with delays in both directions after we addressed a signal problem near Fulton St.
+signals,Northbound [N][Q][R][W] trains are running with delays after we addressed a signal problem near 34 St-Herald Sq.
 other,Northbound [4][5] trains are running on the local track from 14 St-Union Sq to 125 St.
 other,Northbound [N] trains are running local from Canal St to 34 St-Herald Sq. Northbound [Q][R][W] trains are running with delays.
 other,Southbound [F]  trains are running with delays.
 other,Southbound [2] trains are rerouted via the [5] line from 149 St-Grand Concourse to Nereid Av.  Southbound [3] trains are delayed.
 subway_cars,[2][3] trains are running with delays in both directions after we moved a train that had its brakes activated near 125 St.
 other,Southbound [2] trains are rerouted via the [5] line from 149 St-Grand Concourse to Nereid Av.  Southbound [3] trains are delayed.
-signal,Northbound [A] trains are running at slower speeds near 88 St. We are addressing a signal problem near that station.
+signals,Northbound [A] trains are running at slower speeds near 88 St. We are addressing a signal problem near that station.
 other,Southbound [F][M] trains are running with delays in Manhattan.
 police_medical_activity,Southbound [4] trains are running with delays after EMS assisted someone in need on a train at Burnside Av.
-signal,[A][C] trains are running with delays in both directions while we address a signal problem near Fulton St. Some southbound [C] via [F] from W 4 St to Jay St.
+signals,[A][C] trains are running with delays in both directions while we address a signal problem near Fulton St. Some southbound [C] via [F] from W 4 St to Jay St.
 subway_cars,Northbound [2][3] trains are delayed while we investigate what caused a train's brakes to be activated near 125 St.
 police_medical_activity,Southbound [N][R][W] trains are running with delays after EMS responded to someone in need of medical help on a train at 49 St.
-signal,[A][C] trains are running with delays in both directions while we address a signal problem near Fulton St.
+signals,[A][C] trains are running with delays in both directions while we address a signal problem near Fulton St.
 subway_cars,Northbound [2][3] trains are delayed while we investigate what caused a train's brakes to be activated near 125 St.
 police_medical_activity,Broad St-bound [J] trains are running with delays after we investigated a report of someone in need of EMS assistance on a train at Woodhaven Blvd.
-signal,[A][C] trains are running with delays in both directions while we address a signal problem near Fulton St.
+signals,[A][C] trains are running with delays in both directions while we address a signal problem near Fulton St.
 tracks,[4][5][6] trains are running with delays in both directions after we restored third rail power  between 125 St and Longwood Av
 tracks,Southbound [2][5] trains are runnig with delays while we perform switch maintenance near Jackson Av.
 tracks,[B][C] trains are running with delays in both directions after we completed track maintenance near 116 St.
@@ -988,13 +988,13 @@ tracks,[4][5][6] trains are running with delays in both directions while we perf
 other,Northbound [D] trains are running with delays after we requested FDNY assistance for a report of smoke at Bedford Park Blvd.
 other,Northbound [Q] trains are running express from Kings Hwy to Prospect Park
 police_medical_activity,Northbound [B][Q] trains are delayed while we request NYPD assistance for an unauthorized person on the tracks at Church Av.
-signal,[1] trains are running with delays in both directions after we addressed a signal problem at 72 St.
+signals,[1] trains are running with delays in both directions after we addressed a signal problem at 72 St.
 subway_cars,[M] trains are running with delays in both directions after we removed a train with a mechanical problem from service at Seneca Av.
-signal,Northbound [R] trains are running with delays after we addressed a signal problem at 36 St.
-signal,Northbound [R] trains are running with delays while we address a signal problem at 36 St.
+signals,Northbound [R] trains are running with delays after we addressed a signal problem at 36 St.
+signals,Northbound [R] trains are running with delays while we address a signal problem at 36 St.
 subway_cars,Southbound [6] trains are running with delays after we addressed a door problem on a train at Buhre Av.
 subway_cars,Northbound [D][N] trains are running with delays after we addressed a door problem on a train at Atlantic Av-Barclays Ctr.
-signal,Southbound [1]  trains are running with delays after we addressed a signal problem at 72 St.
+signals,Southbound [1]  trains are running with delays after we addressed a signal problem at 72 St.
 subway_cars,[L] trains are running with delays in both directions after we removed a train with a mechanical problem from service at Canarsie-Rockaway Pkwy.
 police_medical_activity,[E] trains are running with delays in both directions after we requested NYPD assistance for someone being disruptive on a train at World Trade Center.
 subway_cars,Southbound [2][3] trains are running with delays after we removed a train from service at Wall St.
@@ -1002,8 +1002,8 @@ subway_cars,Southbound [2][3] trains are running with delays while we remove a t
 subway_cars,[M] trains are running with extensive delays in both directions after we removed a train with a mechanical problem from service at Seneca Av.
 subway_cars,Southbound [1] trains are running with delays after we removed a train from service at 103 St.
 subway_cars,Southbound [1] trains are delayed while we remove a train from service at 103 St.
-signal,Southbound [1] trains are running express from 96 St to Times Sq-42 St while we address a signal problem at 72 St.
-signal,Southbound  [1] trains are running express from 96 St to Times Sq-42 St while we address a signal problem at 72 St.
+signals,Southbound [1] trains are running express from 96 St to Times Sq-42 St while we address a signal problem at 72 St.
+signals,Southbound  [1] trains are running express from 96 St to Times Sq-42 St while we address a signal problem at 72 St.
 police_medical_activity,[E] trains are delayed entering/leaving World Trade Center while we request NYPD assistance at that station.
 subway_cars,Northbound [F] and Forest Hills-bound [M] trains are running with delays after we removed a train with a door problem from service at Broadway-Lafayette St.
 police_medical_activity,[L] trains are running with delays in both directions after we requested NYPD/EMS assistance for someone on a train at 8 Av.
@@ -1014,10 +1014,10 @@ subway_cars,Northbound [F] trains are running with delays after we addressed a d
 police_medical_activity,[L] trains are delayed entering/leaving 8 Av while we request NYPD/EMS assistance for someone on a train at the station.
 subway_cars,Middle Village-Metropolitan Av-bound [M] trains are delayed while we remove a train with a mechanical problem from service at Seneca Av.
 subway_cars,Northbound [F] trains are delayed while we address a door problem on a train at East Broadway.
-signal,Southbound [E][F] trains are running with delays after we addressed a signal problem at 47-50 Sts-Rockefeller Ctr.
-signal,Southbound [R] trains are running with delays after we addressed a signal problem near Queens Plaza.
-signal,Southbound [E][F] trains are running with delays while we address a signal problem at 47-50 Sts-Rockefeller Ctr.
-signal,Southbound [R] are running with delays while we address a signal problem near Queens Plaza.
+signals,Southbound [E][F] trains are running with delays after we addressed a signal problem at 47-50 Sts-Rockefeller Ctr.
+signals,Southbound [R] trains are running with delays after we addressed a signal problem near Queens Plaza.
+signals,Southbound [E][F] trains are running with delays while we address a signal problem at 47-50 Sts-Rockefeller Ctr.
+signals,Southbound [R] are running with delays while we address a signal problem near Queens Plaza.
 tracks,Northbound [4][6] trains are running with delays after track maintenance near Grand Central-42 St concluded.
 tracks,[E] trains are running with delays in both directions after track maintenance in Queens concluded.
 tracks,[F] trains are running with delays in both directions after planned track maintenance in Queens concluded.
@@ -1026,9 +1026,9 @@ tracks,[E] trains are running with delays in both directions while we perform tr
 tracks,Southbound [2][3] trains are running with delays after track maintenance near 96 St concluded.
 tracks,Southbound [2][3] trains are delayed while we perform track maintenance near 96 St.
 stations_structures,Northbound [N][Q] trains are running with delays after we conducted station maintenance near Times Sq-42 St.
-signal,Southbound [E][F] trains are running with delays after we addressed a signal problem at 47-50 Sts-Rockefeller Ctr.
+signals,Southbound [E][F] trains are running with delays after we addressed a signal problem at 47-50 Sts-Rockefeller Ctr.
 tracks,Southbound [2][3] trains are running with delays after we conducted track maintenance near 96 St.
-signal,Southbound [E][F] trains are running with delays while we address a signal problem at 47-50 Sts-Rockefeller Ctr.
+signals,Southbound [E][F] trains are running with delays while we address a signal problem at 47-50 Sts-Rockefeller Ctr.
 police_medical_activity,[4][6] trains are running with delays in both directions after we requested NYPD assistance for an unauthorized person on the track near Grand Central-42 St.
 tracks,Northbound [2][3] trains are running with delays after we conducted track maintenance near 125 St.
 other,Some southbound [2] trains are running via the [5] line from 149 St-Grand Concourse to Nevins St . Southbound [3] trains are delayed.
@@ -1072,7 +1072,7 @@ police_medical_activity,Southbound [R] trains are running with delays in Brookly
 subway_cars,Southbound [6] trains are running with delays after we moved a train that had its brakes activated at Astor Pl.
 police_medical_activity,Stillwell Av-bound [F] and Church Av-bound [G] trains are running with delays after EMS responded to someone in need at 15 St-Prospect Park.
 tracks,Jamaica-bound [E][F] and 71 Av-bound [M][R] trains are running with delays after FDNY extinguished a track fire near Jackson Hts-Roosevelt Av.
-signal,[B][Q] trains are running with delays in both directions after we addressed a signal problem  near Prospect Park.
+signals,[B][Q] trains are running with delays in both directions after we addressed a signal problem  near Prospect Park.
 subway_cars,Southbound [1] trains are running with delays after we removed a train with a mechanical problem from service at Dyckman St.
 police_medical_activity,Northbound [R] trains are running with delays after EMS responded to someone in need of assistance on a train at Whitehall St-South Ferry.
 other,71 Av-bound [M][R] trains are running express from Queens Plaza to Jackson Hts-Roosevelt Av.
@@ -1080,12 +1080,12 @@ police_medical_activity,Stillwell Av-bound [F] and Church Av-bound [G] trains ar
 subway_cars,Southbound [1] trains are delayed while we remove a train with a mechanical problem from service at Dyckman St.
 police_medical_activity,Southbound [2][3] trains are running with delays after we investigated a report of people being disruptive on a train at Park Place.
 tracks,Northbound [1] trains are running with delays after we removed debris from the tracks at 137 St-City College.
-signal,[B][Q] trains are running with delays in both directions.  We are addressing a signal problem near Prospect Park.
-signal,"[B][Q] trains are running with delays in both directions, severely northbound.    We are addressing a signal problem near Prospect Park."
+signals,[B][Q] trains are running with delays in both directions.  We are addressing a signal problem near Prospect Park.
+signals,"[B][Q] trains are running with delays in both directions, severely northbound.    We are addressing a signal problem near Prospect Park."
 other,[B][Q] trains are running with delays in both directions.
-signal,[B][Q] trains are running with delays in both directions after we addressed a signal malfunction near Brighton Beach.
+signals,[B][Q] trains are running with delays in both directions after we addressed a signal malfunction near Brighton Beach.
 police_medical_activity,Southbound [2][3] trains are delayed while we investigate a report of people being disruptive on a train at Park Place.
-signal,[7] trains are running with delays in both directions after we performed signal maintenance near 33 St-Rawson St.
+signals,[7] trains are running with delays in both directions after we performed signal maintenance near 33 St-Rawson St.
 tracks,[L] trains are running with delays in both directions after we performed track maintenance at Canarsie-Rockaway Pkwy.
 other,Southbound [B] trains are running on the local track from Kings Hwy to Brighton Beach.  [B] trains are delayed in both directions.
 tracks,[L] trains are running with delays in both directions while we perform track maintenance at Canarsie-Rockaway Pkwy.
@@ -1096,27 +1096,27 @@ subway_cars,Jamaica Center-Parsons/Archer-bound [J] trains are delayed while we 
 other,[4][5] trains are running with delays in both directions after FDNY responded to a report of smoke near 125 St.
 police_medical_activity,Northbound [2][5] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at 149 St-Grand Concourse.
 subway_cars,Broad St-bound [J] trains are running with delays after we removed a train with a mechanical problem from service at Crescent St.
-signal,[7] trains are running with delays in both directions after we performed signal maintenance near 33 St-Rawson St.
+signals,[7] trains are running with delays in both directions after we performed signal maintenance near 33 St-Rawson St.
 subway_cars,Broad St-bound [J] trains are delayed while we remove a train with a mechanical problem from service at Crescent St.
-signal,[7] trains are running with delays in both directions while we perform signal maintenance near 33 St-Rawson St.
+signals,[7] trains are running with delays in both directions while we perform signal maintenance near 33 St-Rawson St.
 other,[5] via [2] between 149 St-Grand Concourse and Nevins St in both directions.  Downtown [4] trains are delayed.  Uptown [4] local 42 St to 125 St.
 other,Downtown [5] via [2] from 149 St-Grand Concourse to Nevins St.  Downtown [4] trains are delayed.  FDNY is responding to a report of smoke near 125 St.
 subway_cars,Southbound [6] trains are running with delays after we addressed a door problem on a train at 14 St-Union Sq.
-signal,[7] trains are running with delays in both directions after we addressed a signal problem at Queensboro Plaza.
+signals,[7] trains are running with delays in both directions after we addressed a signal problem at Queensboro Plaza.
 subway_cars,Southbound [6] trains are delayed while we address a door problem on a train at 14 St-Union Sq.
 stations_structures,[N][Q][R][W] trains are delayed in both directions after we restored a temporary loss of power between Canal St and DeKalb Av.
 subway_cars,[A][C] trains are delayed in both directions while we are unable to move a train at  Hoyt-Schermerhorn Sts.
-signal,[7] trains are running with delays in both directions while we address a signal problem at Queensboro Plaza.
+signals,[7] trains are running with delays in both directions while we address a signal problem at Queensboro Plaza.
 subway_cars,Southbound [2][5] trains are running with delays after we removed a train with a mechanical problem from service at 149 St-Grand Concourse.
 subway_cars,Southbound [F] and Middle Village-Metropolitan Av-bound [M] trains are running with delays after we moved a train that had its brakes activated at 23 St.
 subway_cars,8th Ave-bound [L] trains are running with delays after we removed a train with a mechanical problem from service at Myrtle-Wyckoff Avs.
 subway_cars,Southbound [5] trains local from E 180 St to 149 St-Grand Concourse while we remove a train with a mechanical problem from service at 149th St.
 subway_cars,Southbound [2][5] trains are delayed while we remove a train with a mechanical problem from service at 149 St-Grand Concourse.
 subway_cars,Northbound [2] trains are running with delays after we removed a train with a mechanical problem from service at Gun Hill Rd.
-signal,Flushing-Main St-bound [7] trains are running with delays after we addressed a signal problem at Queensboro Plaza.
+signals,Flushing-Main St-bound [7] trains are running with delays after we addressed a signal problem at Queensboro Plaza.
 subway_cars,[5] trains are running with delays in both directions after we moved a train that had its brakes activated at Morris Park.
 subway_cars,Northbound [2] trains are running with delays while we remove a train with a mechanical problem from service at Gun Hill Rd.
-signal,Flushing-Main St-bound [7] trains are running with delays while we address a signal problem at Queensboro Plaza.
+signals,Flushing-Main St-bound [7] trains are running with delays while we address a signal problem at Queensboro Plaza.
 subway_cars,[5] trains are running with delays in both directions after we moved a train that had its brakes activated at Morris Park.
 subway_cars,St George-bound [SIR] trains are running with delays after we removed a train with a door problem from service at Grant City.
 subway_cars,Northbound [5] trains are delayed while we investigate what caused a trains brakes to activate at Morris Park.
@@ -1131,10 +1131,10 @@ tracks,Southbound [2][3] trains are running with delays while we address a switc
 tracks,[F] [G] trains are delayed in both directions while we address a switch problem near Church Av.
 tracks,[E][F] trains are running with delays in both directions after track maintenance in Queens concluded.
 tracks,[2][3] trains are running with delays in both directions after a rail replacement near 135 St concluded.
-signal,[H] trains are running with delays in both directions after we addressed a signal malfunction at Beach 67 St.
+signals,[H] trains are running with delays in both directions after we addressed a signal malfunction at Beach 67 St.
 police_medical_activity,Southbound [4][6] trains are running with delays after we requested EMS assistance for a person in need on a train at 86 St.
 tracks,Coney Island-Stillwell Av -bound [F] and Church Av-bound [G] trains are delayed while we address a switch problem near Church Av.
-signal,[H] trains are running with delays in both directions while we address a signal malfunction at Beach 67 St.
+signals,[H] trains are running with delays in both directions while we address a signal malfunction at Beach 67 St.
 tracks,[E][F] trains are running with delays in both directions while we perform track maintenance in Queens.
 tracks,Northbound [2] trains are delayed.  [3] trains are delayed in both directions. We are performing a rail replacement near 135 St.
 police_medical_activity,Southbound [4][6] trains are delayed while we request EMS assistance for a person in need on a train at 86 St.
@@ -1152,10 +1152,10 @@ tracks,Jamaica Center-Parsons/Archer-bound [E] and Jamaica-179 St-bound [F] trai
 subway_cars,Northbound [A][E] trains are running with delays after we removed a train from service at 50 St.
 other,Southbound [D] trains are running with delays after a work train moved through the area near Atlantic Av-Barclays Ctr.
 subway_cars,Northbound [A][E] trains are delayed while we remove a train from service at 50 St.
-signal,[H] trains are delayed in both directions while we address a signal malfunction at Beach 67 St.
+signals,[H] trains are delayed in both directions while we address a signal malfunction at Beach 67 St.
 other,Southbound [D] trains are delayed while a work train moves through the area near Atlantic Av-Barclays Ctr.
-signal,Southbound [1] trains are running with delays after we addressed a signal problem near 50 St.
-signal,Southbound [1] trains are running with delays while we address a signal problem near 50 St.
+signals,Southbound [1] trains are running with delays after we addressed a signal problem near 50 St.
+signals,Southbound [1] trains are running with delays while we address a signal problem near 50 St.
 subway_cars,Northbound [6] trains are running with delays after we addressed a door malfunction on a train at 125 St.
 subway_cars,Northbound [6] trains are delayed while we address a door malfunction on a train at 125 St.
 police_medical_activity,Southbound [C] trains are running with delays after EMS responded to someone in need on a train at 50 St.
@@ -1169,12 +1169,12 @@ subway_cars,Northbound [B][D] trains are running with delays after we addressed 
 police_medical_activity,Court Sq-bound [G] trains are running with delays after EMS responded to someone in need on a train at Bedford-Nostrand Avs.
 police_medical_activity,Northbound [1] trains are delayed while we get medical help for someone at Times Sq-42 St.
 police_medical_activity,Court Sq-bound [G] trains are running with delays while EMS responds to someone in need on a train at Bedford-Nostrand Avs.
-signal,Southbound [1][2][3] trains are running with delays after we addressed a signal malfunction near 79 St.
+signals,Southbound [1][2][3] trains are running with delays after we addressed a signal malfunction near 79 St.
 police_medical_activity,Northbound [N][Q] trains are running with delays after NYPD responded to a report of someone being disruptive on a train at Canal St.
 subway_cars,Southbound [B][D] trains are running with delays after we removed a train with a mechanical problem from service at 182-183 Sts.
 tracks,[J] trains are running with delays in both directions after we removed debris from the tracks at Chambers St.
 tracks,Northbound [4][5][6] trains are running with delays after we removed debris from the tracks at 110 St.
-signal,Southbound [1][2][3] trains are running at slow speeds while we address a signal malfunction near 79 St. Some southbound [1] will end at 145 St or 137 St.
+signals,Southbound [1][2][3] trains are running at slow speeds while we address a signal malfunction near 79 St. Some southbound [1] will end at 145 St or 137 St.
 police_medical_activity,Southbound [N][Q] trains are running with delays after NYPD responded to a report of someone being disruptive on a train at Canal St.
 subway_cars,Southbound [B][D] trains are delayed while we remove a train with a mechanical problem from service at 182-183 Sts.
 other,"Northbound [6] will run express from 42 St to 125 St. Board [6] trains on the lower-level platform at 59 St and 86 St. For skipped stops, take a southbound train."
@@ -1183,7 +1183,7 @@ subway_cars,Southbound [N][Q] trains are running with delays after we moved a tr
 subway_cars,Metropolitan Av-bound [M] and Bay Ridge-bound [R] trains are running with delays after we addressed a door problem on a train at Grand Av-Newtown.
 tracks,[1] trains are running with delays in both directions after we removed debris from the tracks and moved a train near 50 St.
 tracks,Severe [1] delays in both directions.  Southbound [2][3] delays.  What Happened? We removed debris from the tracks and moved a train near 50 St.
-signal,Southbound [1][2][3] trains are running at slow speeds while we address a signal malfunction near 79 St.
+signals,Southbound [1][2][3] trains are running at slow speeds while we address a signal malfunction near 79 St.
 subway_cars,Southbound [1][2][3] trains are running with delays after we moved a train that had its brakes activated near 50 St.
 subway_cars,Southbound [N][Q] trains are delayed while we investigate why a train's brakes activated at 72 St.
 police_medical_activity,Broad St-bound [J] trains are delayed while we request EMS for someone in need on a train at Cleveland St.
@@ -1205,36 +1205,36 @@ police_medical_activity,Northbound [R][W] trains are running express from Canal 
 subway_cars,Southbound [2][3] trains are running with delays after we removed a train with a mechanical problem from service at Times Sq-42 St.
 subway_cars,[2][5] trains are delayed in both directions while we address a mechanical problem on a train at Winthrop St.
 subway_cars,Southbound [2][3] trains are delayed while we remove a train with a mechanical problem from service at Times Sq-42 St.
-signal,[E][F][M][R] trains are running with delays in both directions after we addressed a signal problem at Forest Hills-71 Av.
+signals,[E][F][M][R] trains are running with delays in both directions after we addressed a signal problem at Forest Hills-71 Av.
 police_medical_activity,Southbound [C][E] trains are running with delays after we requested NYPD assistance for a person being disruptive on a train at Spring St.
 subway_cars,Downtown [6] trains are running with delays after we addressed a mechanical problem on a train at 110 St.
 police_medical_activity,Southbound [C][E] trains are delayed while we request NYPD assistance for a person being disruptive on a train at Spring St.
 other,34 St-Hudson Yards-bound [7] trains are delayed while we request FDNY assistance for a report of smoke in the tunnel between Queens and Manhattan.
 police_medical_activity,Southbound [B][Q] trains are running with delays after we requested medical assistance for someone on a train at 7 Av.
-signal,Southbound [E][F] trains are running local from Forest Hills-71 Av to Jackson Hts-Roosevelt Av while we address a signal problem at Forest Hills-71 Av.
+signals,Southbound [E][F] trains are running local from Forest Hills-71 Av to Jackson Hts-Roosevelt Av while we address a signal problem at Forest Hills-71 Av.
 subway_cars,Southbound [2][3] trains are running with delays after we removed a train with a mechanical problem from service at Chambers St.
 subway_cars,Northbound [D] trains are running with delays after we addressed a door problem on a train at Tremont Av.
 subway_cars,Northbound [A][D] trains are running with delays after we moved a train that had its brakes activated at 59 St-Columbus Circle.
-signal,[E][F][M][R] trains are running with delays in both directions after we addressed a signal problem near Grand Av-Newtown.
-signal,[N] trains are running with delays in both directions after we addressed a signal problem near 86 St. [N] service has resumed between 86 St and Kings Hwy.
-signal,Northbound [1] trains are running with delays while we address a signal problem near 145 St.
-signal,Southbound [N] trains are delayed while we address a signal problem near 86 St.
+signals,[E][F][M][R] trains are running with delays in both directions after we addressed a signal problem near Grand Av-Newtown.
+signals,[N] trains are running with delays in both directions after we addressed a signal problem near 86 St. [N] service has resumed between 86 St and Kings Hwy.
+signals,Northbound [1] trains are running with delays while we address a signal problem near 145 St.
+signals,Southbound [N] trains are delayed while we address a signal problem near 86 St.
 subway_cars,Southbound [R][W] trains are running with delays after we addressed a door problem on a train at 34 St-Herald Sq.
 subway_cars,[A][C] trains are running with delays in both directions after we moved a train that had its brakes activated earlier near 168 St.
 subway_cars,Southbound [R][W] trains are delayed while we address a door problem on a train at 34 St-Herald Sq.
 police_medical_activity,Southbound [2][5] trains are running with delays after we requested medical assistance for someone on a train at 149 St-Grand Concourse.
 subway_cars,Southbound [2][3][4][5] trains are running with delays after we removed a train with a mechanical problem from service at Franklin Av-Medgar Evers College.
-signal,[E][F][M][R] trains are running with delays in both directions. We're addressing a signal problem near Grand Av-Newtown.
-signal,[N][R] trains are running with delays in both directions after we addressed a signal problem earlier in Queens.
+signals,[E][F][M][R] trains are running with delays in both directions. We're addressing a signal problem near Grand Av-Newtown.
+signals,[N][R] trains are running with delays in both directions after we addressed a signal problem earlier in Queens.
 subway_cars,Southbound [A][C] trains are running with delays after we moved a train that had its brakes activated near 168 St.
 subway_cars,Broad St-bound [J][Z] trains are running with delays after we addressed a door problem on a train at Broadway Junction.
 police_medical_activity,8 Av-bound [L] trains are delayed while we request NYPD assistance for someone being disruptive on a train at 14 St-Union Sq.
 other,Southbound [4][5] trains are running local from Atlantic Av-Barclays Ctr to Franklin Av-Medgar Evers College .
-signal,Manhattan-bound [E][F][M][R] trains are running with delays. We're addressing a signal problem near Grand Av-Newtown.
+signals,Manhattan-bound [E][F][M][R] trains are running with delays. We're addressing a signal problem near Grand Av-Newtown.
 police_medical_activity,Southbound [2][5] trains are delayed while we request medical assistance for someone on a train at 149 St-Grand Concourse.
 subway_cars,Southbound [2][5] trains are delayed while we address a mechanical problem on a train at Franklin Av-Medgar Evers College.
 police_medical_activity,Northbound [4][5] trains are running with delays after we removed a train from service and requested EMS assistance for someone on a train at Nevins St.
-signal,Metropolitan Ave-bound [M] and Bay Ridge-bound [R] trains are running with delays.  We're addressing a signal problem near Grand Av-Newtown.
+signals,Metropolitan Ave-bound [M] and Bay Ridge-bound [R] trains are running with delays.  We're addressing a signal problem near Grand Av-Newtown.
 police_medical_activity,[2] trains are running with delays in both directions after we requested EMS and NYPD assistance for someone on a train at Wakefield-241 St.
 subway_cars,Southbound [A] trains are running with delays after we moved a train that had its brakes activated near 168 St.
 subway_cars,Northbound [Q] trains are running with delays after we addressed a mechanical problem on a train at Ocean Pkwy.
@@ -1242,10 +1242,10 @@ police_medical_activity,Northbound [4][5] trains are delayed while we remove a t
 subway_cars,Northbound [A] trains are running with delays after we addressed a door problem on a train at 190 St.
 subway_cars,Northbound [4][5] trains are running with delays after we addressed a door problem on a train at Grand Central-42 St.
 other,Southbound [N][R] trains are running with delays in Brooklyn after we moved a work train earlier in Manhattan.
-signal,Northbound [2][4] trains are running with delays after we addressed a signal problem at Atlantic Av-Barclays Ctr.
+signals,Northbound [2][4] trains are running with delays after we addressed a signal problem at Atlantic Av-Barclays Ctr.
 other,Northbound [4] trains will run express from Franklin Av-Medgar Evers College to Atlantic Av-Barclays Ctr.  Northbound [2]  trains are running with delays.
 other,Southbound [R] trains are running with delays in Brooklyn after we moved a work train earlier in Manhattan.
-signal,Howard Beach-bound [A] trains are delayed while we address a signal malfunction at 80 St.
+signals,Howard Beach-bound [A] trains are delayed while we address a signal malfunction at 80 St.
 tracks,[2] trains are running with delays in both directions after we conducted track maintenance near 3 Av-149 St.
 tracks,[7] trains are running with delays in both directions after we conducted track maintenance near Grand Central-42 St.
 police_medical_activity,Broad St-bound [J] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at Delancey St-Essex St.
@@ -1272,7 +1272,7 @@ police_medical_activity,[R] trains are running with delays in both directions af
 subway_cars,Northbound [4] trains are delayed while we address a mechanical problem on a train at Atlantic Av-Barclays Ctr.
 subway_cars,Southbound [1] trains are running with delays after we removed a train with a mechanical problem from service at 168 St-Washington Hts.
 other,Southbound [4] trains are delayed while we request FDNY assistance with a report of smoke at 125 St.
-signal,Southbound [1] trains are running with delays after we addressed a signal malfunction at 72 St.
+signals,Southbound [1] trains are running with delays after we addressed a signal malfunction at 72 St.
 subway_cars,Southbound [1] trains are delayed while we remove a train with a mechanical problem from service at 168 St-Washington Hts.
 police_medical_activity,[R] trains are delayed entering/leaving Bay Ridge-95 St while we request EMS/NYPD assistance for an employee in need at that station.
 police_medical_activity,[R] trains are delayed entering/leaving 59 St while we request NYPD assistance for someone being disruptive on a train at that station.
@@ -1282,7 +1282,7 @@ police_medical_activity,Jamaica-bound [J] trains are running delays after NYPD r
 police_medical_activity,Jamaica-bound [J] trains are delayed while NYPD responds to someone being disruptive at Kosciuszko St
 other,[N][Q][R] trains are running with delays in both directions.
 tracks,[5] trains are running with delays in both directions after we removed debris from the tracks at Baychester Av.
-signal,Northbound [2][3] trains are delayed while we address a signal malfunction at Atlantic Av-Barclays Ctr.
+signals,Northbound [2][3] trains are delayed while we address a signal malfunction at Atlantic Av-Barclays Ctr.
 police_medical_activity,179 St-bound [F] and Court Sq-bound [G] are running with delays after NYPD responded to someone being disruptive on a train at 7 Av.
 police_medical_activity,Northbound [4][5] trains are running with delays after EMS responded to someone in need on a train at Grand Central-42 St.
 subway_cars,Northbound [4] trains are delayed while we remove a train with a door malfunction from service at 161 St-Yankee Stadium.
@@ -1300,23 +1300,23 @@ subway_cars,Northbound [B][C] trains are delayed while we investigate why a trai
 police_medical_activity,[1] trains are delayed entering/leaving Van Cortlandt Park-242 St/ EMS is responding to someone in need on a train at that station.
 police_medical_activity,Canarsie-bound [L] trains are delayed while NYPD responds to someone being disruptive on a train at Morgan Av.
 other,Southbound [4][5] trains are running with delays in Brooklyn.
-signal,[B][C] trains are running with delays in both directions after we addressed a signal problem near 116 St.
+signals,[B][C] trains are running with delays in both directions after we addressed a signal problem near 116 St.
 police_medical_activity,Southbound [4][5] trains are running with delays after we requested EMS for someone in need at Nevins St.
 other,[N][Q][R] trains are running with severe delays in both directions. [W] service is suspended.
 other,[B][D][F][M] trains are running with delays in both directions.
-signal,[B][C] trains are running with delays in both directions while we address a signal problem near 116 St.
+signals,[B][C] trains are running with delays in both directions while we address a signal problem near 116 St.
 other,"Northbound [B][D][F] and 71 Av-bound [M] trains are running with delays. Some northbound [F] via [G] from Bergen St to Court Sq, then via [E] to Roosevelt Av."
 subway_cars,Main St-bound [7] trains are running with delays after we removed a train with a door problem from service at Junction Blvd.
 tracks,Northbound [A] trains are running with delays after we addressed a signal/switch problem near 80 St.
 tracks,[A] trains are running with delays in both directions while we address a signal/switch problem near 80 St.
 subway_cars,Main St-bound [7] trains are delayed in Queens while we remove a train with a door problem from service at Junction Blvd.
-signal,[J][M] trains are running with delays in both directions while we address a signal problem at Myrtle Av.
+signals,[J][M] trains are running with delays in both directions while we address a signal problem at Myrtle Av.
 tracks,[A] trains are delayed in both directions while we address a signal/switch problem near 80 St.
-signal,[A] trains are running with delays in both directions while we address a signal malfunction at 80 St.
+signals,[A] trains are running with delays in both directions while we address a signal malfunction at 80 St.
 tracks,[N][Q][R][W] trains are disrupted while we address a switch problem at 34 St-Herald Sq.
 police_medical_activity,Southbound [6] trains are running with delays after we investigated a report of people being disruptive on a train at Elder Av.
 police_medical_activity,Southbound [6] trains are delayed while we investigate a report of people being disruptive on a train at Elder Av.
-signal,Northbound [1] trains are running with delays while we address a signal malfunction near 181 St.
+signals,Northbound [1] trains are running with delays while we address a signal malfunction near 181 St.
 tracks,Northbound [N][Q][R][W] trains are disrupted while we address a switch problem at 34 St-Herald Sq.
 tracks,Northbound [N][Q][R][W] trains are delayed while we address a switch problem at 34 St-Herald Sq.
 subway_cars,Northbound [N][W] trains are running with delays after we addressed a door problem on a train at Astoria Blvd.
@@ -1330,7 +1330,7 @@ subway_cars,Northbound [4] trains are running with delays after we addressed a d
 subway_cars,Northbound [4] trains are delayed while we address a door problem on a train at 161 St-Yankee Stadium.
 police_medical_activity,Northbound [6] trains are running with delays after NYPD responded to passengers being disruptive on a train at 86 St.
 police_medical_activity,Northbound [N][W] trains are running with delays after we requested NYPD for someone being disruptive on a train at 39 Av-Dutch Kills.
-signal,[J][M] trains are delayed in both directions while we address a signal problem near Myrtle Av.
+signals,[J][M] trains are delayed in both directions while we address a signal problem near Myrtle Av.
 police_medical_activity,Northbound [2][5] trains are running with delays after we requested NYPD assistance with passengers being disruptive on a train at Sterling St.
 subway_cars,Southbound [N][Q][R] trains are running with delays after we moved a train that had its brakes activated at Whitehall St-South Ferry.
 police_medical_activity,Northbound [2][5] trains are delayed while we request NYPD assistance with passengers being disruptive on a train at Sterling St.
@@ -1350,13 +1350,13 @@ police_medical_activity,Northbound [N][R][W] trains are running with delays afte
 tracks,Southbound [A] trains are running with delays after we were temporarily unable to move switches near Hoyt-Schermerhorn Sts.
 subway_cars,Southbound [6] trains are delayed while we remove a train with a door problem from service at Canal St.
 subway_cars,Northbound [R][W] trains are running with delays after we removed a train with a mechanical problem from service at Canal St.
-signal,[1] trains are running with delays in both directions after we addressed a signal problem at Van Cortlandt Park-242 St.
+signals,[1] trains are running with delays in both directions after we addressed a signal problem at Van Cortlandt Park-242 St.
 subway_cars,Flushing-Main St-bound [7] trains are delayed while we remove a train car in need of repair from service at 74 St-Broadway.
 subway_cars,Northbound [2][5] trains are running with delays after we addressed a door problem on a train at Church Av.
 subway_cars,Northbound [2][5] trains are delayed while we address a door problem on a train at Church Av.
 police_medical_activity,Northbound [N][R][W] trains are delayed while we request NYPD assistance for someone being disruptive on a train at 5 Av/59 St.
 subway_cars,[S] trains are running with delays in both directions while we address a mechanical problem on a train at Times Sq-42 St.
-signal,[1] trains are running with delays in both directions while we address a signal problem at Van Cortlandt Park-242 St.
+signals,[1] trains are running with delays in both directions while we address a signal problem at Van Cortlandt Park-242 St.
 subway_cars,Northbound [R][W] trains are delayed while we remove a train with a mechanical problem from service at Canal St.
 subway_cars,Northbound [5] trains are running with delays after we moved a train that had its brakes activated at Baychester Av.
 subway_cars,Court Sq-bound [G] trains are delayed while we remove a train with a mechanical problem from service at Clinton-Washington Avs.
@@ -1367,23 +1367,23 @@ subway_cars,Southbound [2][3] trains are running delays after we removed a train
 police_medical_activity,Southbound [4][5][6] trains are running with delays after we requested EMS assistance for someone on a train at 59 St and Bowling Green.
 subway_cars,Southbound [2][3] trains are delayed while we remove a train with a mechanical problem from service at Clark St.
 other,Southbound [R] trains are running express from Atlantic Av-Barclays Ctr to 36 St (Brooklyn).
-signal,[1] trains are running with delays in both directions after we addressed a signal problem at Van Cortlandt Park-242 St.
+signals,[1] trains are running with delays in both directions after we addressed a signal problem at Van Cortlandt Park-242 St.
 police_medical_activity,Southbound [4][5] trains are running local from 125 St to Grand Central-42 St while we request EMS assistance for someone on a train at 59 St.
-signal,[1] trains are delayed entering/leaving Van Cortlandt Park-242 St while we address a signal problem at that station.
+signals,[1] trains are delayed entering/leaving Van Cortlandt Park-242 St while we address a signal problem at that station.
 police_medical_activity,Southbound [4][5] trains are delayed while we request EMS assistance for someone on a train at 59 St.
-signal,Northbound [E] and Forest Hills-71 Av-bound [M] trains are running with delays after we addressed a signal problem near 5 Av/53 St.
-signal,Northbound [E] and Forest Hills-71 Av-bound [M] trains are running with delays while we address a signal problem near 5 Av/53 St.
+signals,Northbound [E] and Forest Hills-71 Av-bound [M] trains are running with delays after we addressed a signal problem near 5 Av/53 St.
+signals,Northbound [E] and Forest Hills-71 Av-bound [M] trains are running with delays while we address a signal problem near 5 Av/53 St.
 other,"Southbound [B][D] trains are running with delays, southbound [B] trains severely, in Brooklyn."
 subway_cars,Jamaica Center-Parsons/Archer-bound [J] trains are running with delays after we removed a train with a door problem from service at Broad St.
 other,"Southbound [B][D] trains are running with delays, southbound [B] trains severely, in Manhattan."
 subway_cars,Southbound [B] trains are running with severe delays in Manhattan after we removed a train with a mechanical problem from service at Bedford Park Blvd.
 subway_cars,Southbound [B] trains are running with delays after we removed a train with a mechanical problem from service at Bedford Park Blvd.
 subway_cars,Southbound [B] trains are delayed while we address a mechanical problem on a train at Bedford Park Blvd.
-signal,Southbound [B][D] trains are running with delays after we addressed a signal problem near 145 St.
+signals,Southbound [B][D] trains are running with delays after we addressed a signal problem near 145 St.
 subway_cars,Northbound [Q] trains are running with delays after we removed a train with a mechanical problem from service at Beverley Rd.
-signal,Southbound [B][D] trains are running with delays while we address a signal problem near 145 St.
+signals,Southbound [B][D] trains are running with delays while we address a signal problem near 145 St.
 subway_cars,Northbound [Q] trains are delayed while we remove a train with a mechanical problem from service at Beverley Rd.
-signal,Southbound [B][D] trains are running with delays while we address a signal problem near 145 St.
+signals,Southbound [B][D] trains are running with delays while we address a signal problem near 145 St.
 other,Northbound [1] trains are running with delays after FDNY responded to a report of smoke at 191 St.
 other,Northbound [1] trains are delayed while FDNY responds to a report of smoke at 191 St.
 tracks,Northbound [4][6] trains are running with delays after we conducted track maintenance near Astor Pl.
@@ -1441,7 +1441,7 @@ subway_cars,Canarsie-Rockaway Pkwy-bound [L] trains are delayed while we address
 police_medical_activity,Northbound [4][5] trains are running with delays after NYPD responded to someone being disruptive on a train at Grand Central-42 St.
 police_medical_activity,[N][R] trains are running with delays in both directions after emergency teams responded to someone who was struck by a train at 14 St-Union Sq.
 subway_cars,Southbound [2][5] trains are running with delays after we removed a train with a mechanical problem from service at Prospect Av.
-signal,Northbound [D] trains are running with delays after we addressed a signal problem earlier at 59 St-Columbus Circle.
+signals,Northbound [D] trains are running with delays after we addressed a signal problem earlier at 59 St-Columbus Circle.
 police_medical_activity,Northbound [4][5] trains are delayed while we request NYPD assistance for someone being disruptive on a train at Grand Central-42 St.
 subway_cars,Southbound [2][3] trains are running with delays after we removed a train with a mechanical problem from service at 34 St-Penn Station.
 police_medical_activity,Northbound [2] trains are running with delays after EMS responded to someone in need of medical assistance on a train at E 180 St.
@@ -1452,33 +1452,33 @@ subway_cars,Jamaica Center-Parsons/Archer-bound [J] trains are running with dela
 police_medical_activity,Southbound [6] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at 125 St.
 police_medical_activity,Southbound [6] trains are delayed while we request NYPD assistance for someone being disruptive on a train at 125 St.
 subway_cars,Jamaica Center-Parsons/Archer-bound [J] trains are delayed while we investigate what caused a train's brakes to activate at Kosciuszko St.
-signal,Southbound [A][C][D] trains are running with delays while we address a signal problem near 59 St-Columbus Circle.
+signals,Southbound [A][C][D] trains are running with delays while we address a signal problem near 59 St-Columbus Circle.
 subway_cars,Southbound [1] trains are running with delays after we moved a train that had its brakes activated at 72 St.
 other,Northbound [N][R] trains are running express from DeKalb Av to Times Sq-42 St.  Northbound [N][Q][R] trains are not stopping at 14 St-Union Sq.
-signal,Southbound [D] trains are running with delays in Brooklyn after we addressed a signal problem near Broadway-Lafayette St.
+signals,Southbound [D] trains are running with delays in Brooklyn after we addressed a signal problem near Broadway-Lafayette St.
 other,Northbound [N][R] trains are running express from DeKalb Av to Times Sq-42 St.
-signal,Southbound [D] trains are running with delays after we addressed a signal problem near Broadway-Lafayette St.
+signals,Southbound [D] trains are running with delays after we addressed a signal problem near Broadway-Lafayette St.
 other,Northbound [N][R] trains are running express from Canal St to Times Sq-42 St.
-signal,Southbound [D] trains are running with delays while we address a signal problem near Broadway-Lafayette St.
-signal,Southbound [D] trains are delayed while we address a signal problem near Broadway-Lafayette St.
+signals,Southbound [D] trains are running with delays while we address a signal problem near Broadway-Lafayette St.
+signals,Southbound [D] trains are delayed while we address a signal problem near Broadway-Lafayette St.
 police_medical_activity,Northbound [6] trains are running with delays after NYPD conducted an investigation on a train at 59 St.
 subway_cars,Southbound [A] trains are running with delays after we removed a train with a mechanical problem from service at Kingston-Throop Avs.
 subway_cars,Southbound [A] trains are running with delays after we moved a train that had its brakes activated at Franklin Av.
 subway_cars,Southbound [A] trains are delayed while we remove a train with a mechanical problem from service at Kingston-Throop Avs.
 police_medical_activity,Southbound [4] trains are running with delays after EMS responded to someone in need of medical assistance on a train at 149 St-Grand Concourse.
 police_medical_activity,Northbound [6] trains are delayed while NYPD conducts an investigation on a train at 59 St.
-signal,[2] trains are running with delays in both directions after we addressed a signal malfunction near 149 St-Grand Concourse.
-signal,Northbound [2] trains are running with delays after we addressed a signal problem near 149 St-Grand Concourse.
-signal,Southbound [2][3] trains are running with delays after we addressed a signal problem near 96 St.
+signals,[2] trains are running with delays in both directions after we addressed a signal malfunction near 149 St-Grand Concourse.
+signals,Northbound [2] trains are running with delays after we addressed a signal problem near 149 St-Grand Concourse.
+signals,Southbound [2][3] trains are running with delays after we addressed a signal problem near 96 St.
 subway_cars,Northbound [6] trains are running with delays after we corrected a door malfunction on a train at 3 Av-138 St.
 tracks,Southbound [2][4] trains are running with delays after we addressed a switch problem near Atlantic Av-Barclays Ctr.
-signal,Southbound [2][3] trains are delayed while we address a signal problem near 96 St.
-signal,Northbound [2] trains are delayed in both directions while we address a signal malfunction near 149 St-Grand Concourse.
+signals,Southbound [2][3] trains are delayed while we address a signal problem near 96 St.
+signals,Northbound [2] trains are delayed in both directions while we address a signal malfunction near 149 St-Grand Concourse.
 tracks,Southbound [2][4] trains are running with delays while we address a switch problem near Atlantic Av-Barclays Ctr.
 subway_cars,[L] trains are running with delays in both directions after we investigated what activated a train's brakes near East 105 St.
 tracks,Southbound [2][4] trains are delayed while we address a switch problem near Atlantic Av-Barclays Ctr.
-signal,Northbound [2][5] trains are delayed in both directions while we address a signal malfunction near 149 St-Grand Concourse.
-signal,Northbound [2][5] trains are running with delays while we address a signal malfunction near 149 St-Grand Concourse.
+signals,Northbound [2][5] trains are delayed in both directions while we address a signal malfunction near 149 St-Grand Concourse.
+signals,Northbound [2][5] trains are running with delays while we address a signal malfunction near 149 St-Grand Concourse.
 subway_cars,[L] trains are delayed in both directions while we investigate what activated a train's brakes near East 105 St.
 tracks,Northbound [1][2][3] trains are running with delays after we addressed a switch problem near 96 St.
 tracks,Northbound [1][2][3] trains are delayed while we address a switch problem near 96 St.
@@ -1512,7 +1512,7 @@ subway_cars,Northbound [F] trains are delayed while we remove a train with a mec
 other,Southbound [3] trains are delayed. [2] trains are running via the [5] line from 149 St-Grand Concourse to Nevins St in both directions.
 other,Northbound [R] trains are running via the [N] from DeKalb Av to Canal St. Northbound [Q] trains are running via the [R] from DeKalb Av to Canal St.
 tracks,Southbound [2][3] trains are delayed while we request FDNY for a report of a track fire at Central Park North (110 St).
-signal,[7] trains are delayed entering/leaving 34 St-Hudson Yards while we address a signal problem near that station.
+signals,[7] trains are delayed entering/leaving 34 St-Hudson Yards while we address a signal problem near that station.
 police_medical_activity,Northbound [D] trains are delayed while we request NYPD for an unauthorized person on the tracks at Kingsbridge Rd.
 police_medical_activity,Metropolitan Av-bound [M] trains are delayed while we request NYPD for someone being disruptive on a train at Myrtle Av.
 subway_cars,Northbound [Q] trains are running with delays after we addressed a door problem on a train at 57 St-7 Av.
@@ -1520,10 +1520,10 @@ subway_cars,Northbound [Q] trains are delayed while we address a door problem on
 police_medical_activity,Southbound [2] trains are running with delays after we investigated a report of someone being disruptive on a train at Sterling St.
 police_medical_activity,Northbound [A][D] trains are running with delays after we requested NYPD for someone being disruptive on a train at 59 St-Columbus Circle.
 police_medical_activity,Northbound [A][D] trains are delayed while we request NYPD for someone being disruptive on a train at 59 St-Columbus Circle.
-signal,Southbound [4] trains are running with delays after we addressed a signal problem near Mosholu Pkwy.
+signals,Southbound [4] trains are running with delays after we addressed a signal problem near Mosholu Pkwy.
 subway_cars,Flushing-Main St-bound [7] trains are running with delays after we moved a slow-moving work train in Queens.
 subway_cars,Southbound [4] trains are running with delays after we removed a train with a mechanical problem from service at 149 St-Grand Concourse.
-signal,Southbound [4] trains are running with delays while we address a signal problem near Mosholu Pkwy.
+signals,Southbound [4] trains are running with delays while we address a signal problem near Mosholu Pkwy.
 subway_cars,Flushing-Main St-bound [7] trains are delayed while we address a slow-moving work train in Queens.
 subway_cars,Southbound [4] trains are delayed while we remove a train with a mechanical problem from service at 149 St-Grand Concourse.
 police_medical_activity,[6] trains are running with delays in both directions after we requested NYPD/EMS assistance for someone in need on a train at Pelham Bay Park.
@@ -1556,30 +1556,30 @@ police_medical_activity,Southbound [4][6] trains are running with delays after N
 police_medical_activity,Southbound [4][6] trains are delayed while we request NYPD assistance for a person being disruptive at 33 St.
 other,[L] trains are running with delays in both directions after we moved equipment for planned work between 3 Av and Montrose Av.
 other,[L] trains are delayed in both directions while we are moving equipment for planned work between 3 Av and Montrose Av.
-signal,Southbound [1][2][3] trains are running with delays after we addressed a signal problem near 34 St-Penn Station.
-signal,Southbound [1][2][3] trains are delayed while we address a signal problem near 34 St-Penn Station.
-signal,[L] trains are running with delays in both directions after we addressed a signal problem at 6 Av.
+signals,Southbound [1][2][3] trains are running with delays after we addressed a signal problem near 34 St-Penn Station.
+signals,Southbound [1][2][3] trains are delayed while we address a signal problem near 34 St-Penn Station.
+signals,[L] trains are running with delays in both directions after we addressed a signal problem at 6 Av.
 subway_cars,Northbound [6] trains are running with delays after we addressed a door problem on a train at 33 St.
 tracks,[G] trains are running with delays in both directions after we addressed a switch problem near Bedford-Nostrand Avs.
 subway_cars,Northbound [6] trains are delayed while we address a door problem on a train at 33 St.
 subway_cars,Court Sq-bound [G] trains are running with delays after we removed a train with a mechanical problem from service at Classon Av.
 tracks,[G] trains are delayed in both directions while we address a switch problem near Bedford-Nostrand Avs.
-signal,[N] trains are running with delays in both directions after we addressed a signal problem at Coney Island-Stillwell Av.
+signals,[N] trains are running with delays in both directions after we addressed a signal problem at Coney Island-Stillwell Av.
 subway_cars,Court Sq-bound [G] trains are delayed while we address a mechanical problem on a train at Classon Av.
 other,[N] trains have resumed running scheduled service between 86 St and Coney Island-Stillwell Av in both directions. [N] trains are running with delays in both directions.
 subway_cars,Church Av-bound [G] and Coney Island-bound [F] trains are running with delays after we moved a train that had its brakes activated at 15 St-Prospect Park.
 subway_cars,Southbound [4][5] trains are running with delays after we were unable to move a train Brooklyn Bridge-City Hall.
 subway_cars,Church Av-bound [G] and Coney Island-bound [F] trains are delayed while we investigate why a train's brakes activated at 15 St-Prospect Park.
-signal,Southbound [N] trains are running with delays while we address a signal problem at Coney Island-Stillwell Av.
+signals,Southbound [N] trains are running with delays while we address a signal problem at Coney Island-Stillwell Av.
 subway_cars,Northbound [N][Q] trains are running with delays after we addressed a door problem on a train at 34 St-Herald Sq.
 police_medical_activity,Northbound [6] trains are running with delays after the NYPD responded to people being disruptive on a train at Parkchester.
 subway_cars,Northbound [N][Q] trains are delayed while we address a door problem on a train at 34 St-Herald Sq.
 subway_cars,[L] trains are running with delays in both directions after we moved a train that had its brakes activated near 1 Av.
-signal,Southbound [A][D] trains are running with delays after we addressed a signal malfunction near 125 St.
+signals,Southbound [A][D] trains are running with delays after we addressed a signal malfunction near 125 St.
 police_medical_activity,Northbound [6] trains are running with delays after we requested medical help for someone at Grand Central-42 St.
-signal,Southbound [A][D] trains are delayed while we address a signal malfunction near 125 St.
+signals,Southbound [A][D] trains are delayed while we address a signal malfunction near 125 St.
 subway_cars,[L] trains are delayed in both directions while we investigate why a train's brakes activated near 1 Av. Some 8 Av-bound [L] trains will end at Bedford Av.
-signal,[J][M] trains are running with delays in both directions after we addressed a signal problem at Marcy Av.
+signals,[J][M] trains are running with delays in both directions after we addressed a signal problem at Marcy Av.
 subway_cars,Northbound [4][5] trains are running with delays after we addressed a door problem on a train at Grand Central-42 St.
 subway_cars,Northbound [4][5] trains are delayed while we address a door problem on a train at Grand Central-42 St.
 police_medical_activity,Southbound [1][2][3] trains are running with delays after we requested EMS for someone in need at 72 St.
@@ -1587,7 +1587,7 @@ police_medical_activity,Southbound [3] trains are running local from 72 St to Ti
 police_medical_activity,Southbound [D] trains are running with delays after we requested EMS for someone in need on a train at 161 St-Yankee Stadium.
 subway_cars,Southbound [B][D] trains are running with delays after we addressed a door problem on a train at Grand St.
 police_medical_activity,Southbound [D] trains are delayed while we request EMS for someone in need on a train at 161 St-Yankee Stadium.
-signal,[4] trains are running with delays in both directions after we addressed a signal problem at Woodlawn.
+signals,[4] trains are running with delays in both directions after we addressed a signal problem at Woodlawn.
 police_medical_activity,Southbound [2][5] trains are running with delays after NYPD responded to someone being disruptive on a train at Prospect Av.
 subway_cars,Southbound [B][D] trains are delayed while we address a door problem on a train at Grand St.
 subway_cars,You may wait longer for a southbound [2] train in Manhattan and Brooklyn.  We removed a train with a mechanical problem from service at Gun Hill Rd.
@@ -1595,13 +1595,13 @@ police_medical_activity,Southbound [2][5] trains are delayed while NYPD responds
 subway_cars,Southbound [B][Q] trains are running with delays after we removed a train with a mechanical problem from service at Church Av.
 subway_cars,Northbound [B][D][F] and Forest Hills-bound [M] trains are running with delays after we moved a train that had its brakes activated at W 4 St-Wash Sq.
 subway_cars,Southbound [B] trains are running local from Prospect Park to Kings Hwy while we remove a train with a mechanical problem from service at Church Av.
-signal,Broad St-bound [J] and 71 Av-bound [M] trains are running with delays while we address a signal problem near Flushing Av.
-signal,[4] trains are delayed in both directions while we address a signal malfunction at Woodlawn.
+signals,Broad St-bound [J] and 71 Av-bound [M] trains are running with delays while we address a signal problem near Flushing Av.
+signals,[4] trains are delayed in both directions while we address a signal malfunction at Woodlawn.
 subway_cars,Northbound [B][D] trains are running local from W 4 St-Wash Sq to 34 St-Herald Sq while we investigate why a train's brakes activated at W 4 St-Wash Sq.
 police_medical_activity,Northbound [4][5][6] trains are running with delays after we got medical assistance for someone in need at 23 St.
-signal,[G] trains are running with delays in both directions after we addressed a signal problem at Court Sq.
+signals,[G] trains are running with delays in both directions after we addressed a signal problem at Court Sq.
 subway_cars,Northbound [B][D] trains are delayed while we investigate why a train's brakes activated at W 4 St-Wash Sq.
-signal,[G] trains are delayed entering/leaving Court Sq while we address a signal problem near that station.
+signals,[G] trains are delayed entering/leaving Court Sq while we address a signal problem near that station.
 police_medical_activity,Southbound [N][Q][R] trains are running with delays after NYPD conducted an investigation at Jay St-MetroTech.
 other,Southbound [R] trains are running via the [N] line from Canal St to DeKalb Av.
 subway_cars,Northbound [B][D][F] and Forest Hills-bound [M] trains are running with delays after we moved a train that had a train's brakes activated at 42 St-Bryant Pk.
@@ -1616,21 +1616,21 @@ police_medical_activity,Northbound [4][5] trains are delayed while we investigat
 subway_cars,Southbound [N] [R] [W] trains are running with delays after we moved a work train along the line.
 tracks,Forest Hills-71 Av-bound [M] trains are running with delays while we conduct track maintenance near Myrtle Av.
 other,[F] trains are running with delays in both directions while we conduct planned work in Brooklyn.
-signal,Northbound [C][E] trains are running with delays after we addressed a signal problem near W 4 St-Wash Sq.
+signals,Northbound [C][E] trains are running with delays after we addressed a signal problem near W 4 St-Wash Sq.
 other,Southbound [B][D] trains are running with delays after we moved a work train over the Manhattan Bridge.
 other,Southbound [N] [R] [W] trains are running with delays while we move a work train along the line.
-signal,Northbound [B][C] trains are running with delays after we addressed a signal problem near 125 St.
+signals,Northbound [B][C] trains are running with delays after we addressed a signal problem near 125 St.
 other,Southbound [B][D] trains are delayed while we move a work train over the Manhattan Bridge.
-signal,Northbound [B][C] trains are running with delays while we continue to address a signal problem near 125 St.
+signals,Northbound [B][C] trains are running with delays while we continue to address a signal problem near 125 St.
 tracks,[N] trains are running with delays in both directions after FDNY extinguished a track fire at Coney Island-Stillwell Av.
-signal,Northbound [B][C] trains are running with delays while we continue to address a signal problem near 125 St.
-signal,Northbound [B][C] trains are running with delays after we addressed a signal problem near 125 St.
-signal,[2] trains are running with delays in both directions after we addressed an earlier signal problem at 34 St-Penn Station.
-signal,Northbound [B][C] trains are delayed while we address a signal problem near 125 St.
+signals,Northbound [B][C] trains are running with delays while we continue to address a signal problem near 125 St.
+signals,Northbound [B][C] trains are running with delays after we addressed a signal problem near 125 St.
+signals,[2] trains are running with delays in both directions after we addressed an earlier signal problem at 34 St-Penn Station.
+signals,Northbound [B][C] trains are delayed while we address a signal problem near 125 St.
 tracks,Northbound [N] trains are running with delays while FDNY investigates a report of a track fire at Coney Island-Stillwell Av.
 stations_structures,Southbound [F] trains are running with delays while we conduct planned work in Brooklyn.
 subway_cars,Southbound [N][W] trains are running with delays after we addressed a door problem on a train at Queensboro Plaza.
-signal,Broad St-bound [J] trains are running with delays after we addressed a signal problem near 111 St.
+signals,Broad St-bound [J] trains are running with delays after we addressed a signal problem near 111 St.
 subway_cars,Southbound [4][5][6] trains are running with delays after we removed a train with a mechanical problem from service at Grand Central-42 St.
 subway_cars,Northbound [1][2][3] trains are running with delays after we moved a train that had its brakes activated at 34 St-Penn Station.
 other,[2][3] trains are running with delays in both directions after we investigated a report of smoke at Wall St.
@@ -1641,7 +1641,7 @@ subway_cars,Southbound [R] trains are running with delays after we removed a tra
 other,Northbound [2][3] trains are running on the local track from Chambers St to 34 St-Penn Station.
 police_medical_activity,Southbound [C][E] trains are delayed while NYPD conducts an investigation on a train at 34 St-Penn Station.
 other,[2][3] trains are delayed in both directions while we investigate a report of smoke at Wall St.
-signal,Northbound [2][3] trains are running with delays while we address a signal problem at 34 St-Penn Station.
+signals,Northbound [2][3] trains are running with delays while we address a signal problem at 34 St-Penn Station.
 police_medical_activity,[N][W] trains are delayed in both directions while we request EMS/NYPD assistance for someone in need on a train at Astoria-Ditmars Blvd.
 subway_cars,[C] trains are running with delays in both directions after we removed a train in need of cleaning from service at Euclid Av.
 police_medical_activity,Northbound [B] trains are running with delays after NYPD responded to someone being disruptive on a train at Newkirk Plaza.
@@ -1663,8 +1663,8 @@ tracks,Southbound [4] trains are running with delays after track maintenance nea
 police_medical_activity,Jamaica-bound [J] trains are running with delays after NYPD conducted an investigation at Delancey St-Essex St.
 tracks,Southbound [4] trains are delayed while we conduct track maintenance near 138 St-Grand Concourse.
 police_medical_activity,Jamaica-bound [J] trains are delayed while NYPD conducts an investigation at Delancey St-Essex St.
-signal,[G] trains are running with delays in both directions after we addressed a signal problem at Nassau Av.
-signal,[G] trains are running with delays in both directions while we address a signal problem near Nassau Av.
+signals,[G] trains are running with delays in both directions after we addressed a signal problem at Nassau Av.
+signals,[G] trains are running with delays in both directions while we address a signal problem near Nassau Av.
 police_medical_activity,Southbound [A] trains are running with delays after EMS responded to an employee in need on a train at Lafayette Av.
 police_medical_activity,Southbound [4][6] trains are running with delays after we requested EMS assistance for a person in need on a train at Bleecker St.
 subway_cars,Northbound [N][Q] trains are running with delays after we removed a train with a mechanical problem from service at 14 St-Union Sq.
@@ -1689,9 +1689,9 @@ police_medical_activity,[4][5][6] trains are running with delays in both directi
 police_medical_activity,WTC-bound [E] and Metropolitan Av-bound [M] trains are running with delays after we requested EMS for someone in need at Lexington Av/53 St.
 police_medical_activity,34 St-Hudson Yards [7] trains are running with delays after the NYPD responded to a person being disruptive on a train at Junction Blvd.
 police_medical_activity,WTC-bound [E] and Metropolitan Av-bound [M] trains are delayed while EMS responds to someone in need of medical help on a train at Lexington Av/53 St.
-signal,Northbound [A][C][F] trains are running with delays after we addressed a signal problem near Jay St-MetroTech.
+signals,Northbound [A][C][F] trains are running with delays after we addressed a signal problem near Jay St-MetroTech.
 police_medical_activity,Northbound [1] trains are running with delays after NYPD conducted an investigation on a train at 238 St.
-signal,Northbound [A][C] trains are running with delays while we address a signal problem near Jay St-MetroTech. Some northbound [A][C] via [F] from Jay St to W 4 St.
+signals,Northbound [A][C] trains are running with delays while we address a signal problem near Jay St-MetroTech. Some northbound [A][C] via [F] from Jay St to W 4 St.
 police_medical_activity,Southbound [2][3] trains are running with delays after we got medical help for someone in need on a train at Times Sq-42 St.
 subway_cars,Northbound [F] and Court Sq-bound [G] trains are running with delays after we removed a train in need of cleaning from service at Smith-9 Sts.
 tracks,Southbound [1][2][3] trains are running with delays after we removed debris from the tracks at 50 St.
@@ -1699,8 +1699,8 @@ police_medical_activity,Southbound [2][3] trains are running local from 96 St to
 subway_cars,Northbound [F] and Court Sq-bound [G] trains are delayed while we remove a train in need of cleaning from service at Smith-9 Sts.
 subway_cars,Northbound [F] and Court Sq-bound [G] trains are delayed while we remove a train car in need of cleaning from service at Smith-9 Sts.
 other,Southbound [1] trains will run express from 72 St to 42 St. Some southbound [2] trains will run via the [5] line from 149 St-Grand Concourse to Nevins St.
-signal,Northbound [A][C] trains are running with delays while we address a signal problem near Jay St-MetroTech.
-signal,[N] trains are running with delays in both directions after we addressed a signal problem near Kings Hwy.
+signals,Northbound [A][C] trains are running with delays while we address a signal problem near Jay St-MetroTech.
+signals,[N] trains are running with delays in both directions after we addressed a signal problem near Kings Hwy.
 other,Broad St-bound [J] and Forest Hills-71 Av-bound [M] trains are running on the local track from Myrtle Av to Marcy Av.
 police_medical_activity,Northbound [A][C] trains are running with delays after EMS assisted someone in need on a train at Chambers St.
 police_medical_activity,Northbound [R][W] trains are running with delays after NYPD responded to people being disruptive on a train at 14 St-Union Sq.
@@ -1722,8 +1722,8 @@ subway_cars,Northbound [2][3] trains are delayed while we address a mechanical p
 police_medical_activity,Northbound [N][Q] trains are running with delays after we requested EMS assistance for someone on a train at 14 St-Union Sq.
 other,[E][F][M][R] train service is disrupted in Queens. Northbound [E][F] are running local from Queens Plaza ([E]) /21 St-Queensbridge ([F]) to Roosevelt Ave.
 other,Northbound [E][F] trains are severely delayed in Queens.
-signal,Northbound [D] trains are running with delays after we addressed a signal problem near 9 Av.
-signal,Northbound [D] trains are running with delays while we address a signal problem near 9 Av.
+signals,Northbound [D] trains are running with delays after we addressed a signal problem near 9 Av.
+signals,Northbound [D] trains are running with delays while we address a signal problem near 9 Av.
 police_medical_activity,Northbound [N][Q] trains are delayed while we request EMS assistance for someone on a train at 14 St-Union Sq.
 police_medical_activity,Southbound [2][3] trains are running with delays after we requested NYPD assistance at Times Sq-42 St.
 subway_cars,Southbound [6] trains are running with delays after we removed a train with a door problem from service at 23 St.
@@ -1781,8 +1781,8 @@ police_medical_activity,Southbound [6] trains are running with delays after NYPD
 police_medical_activity,Broad St-bound [J] and 71 Av-bound [M] trains are running with delays after we investigated a report of people being disruptive at Myrtle Av.
 subway_cars,Southbound [F] and Church Av-bound [G] trains are running with delays after we removed a train in need of cleaning from service at 15 St-Prospect Park.
 police_medical_activity,Southbound [4][5] trains are running with delays after we requested NYPD assistance for passengers being disruptive at Fulton St.
-signal,34 St-Hudson Yards-bound [7] trains are running with delays after we addressed a signal malfunction near 5 Av.
-signal,34 St-Hudson Yards-bound [7] trains are running with delays while we address a signal malfunction near 5 Av.
+signals,34 St-Hudson Yards-bound [7] trains are running with delays after we addressed a signal malfunction near 5 Av.
+signals,34 St-Hudson Yards-bound [7] trains are running with delays while we address a signal malfunction near 5 Av.
 police_medical_activity,Jamaica-bound [E] and 71 Av-bound [M] trains are running with delays.  We requested NYPD assistance for someone being disruptive at Court Sq-23 St.
 police_medical_activity,Southbound [4][5] trains are delayed while NYPD responds to passengers being disruptive at Fulton St.
 police_medical_activity,Southbound [B][D] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at Broadway-Lafayette St.
@@ -1791,7 +1791,7 @@ subway_cars,[H] trains are running with delays in both directions after we remov
 subway_cars,Coney Island-bound [F] and Metropolitan Ave-bound [M] trains are running with delays after we addressed a door problem on a train at Broadway-Lafayette St.
 subway_cars,Northbound [B][D] trains are running with delays after we removed a train with a door problem from service at 34 St-Herald Sq.
 other,[J] trains are running with delays in both directions.  Jamaica-bound [Z] trains are running with delays.
-signal,Forest Hills-71 Av-bound [M] trains are running with delays while we address a signal problem near Central Av.
+signals,Forest Hills-71 Av-bound [M] trains are running with delays while we address a signal problem near Central Av.
 other,[B][D][N][Q][R] trains are running with delays in both directions after multiple incidents in Brooklyn.
 subway_cars,Southbound [A][C] trains are running with delays after we moved a train with a mechanical problem at High St.
 subway_cars,[FS] trains are running with delays in both directions after we removed a train that needs cleaning from service at Beach 60 St.
@@ -1813,14 +1813,14 @@ other,Southbound [D]  trains are running local from DeKalb Av to 36 St. Southbou
 other,Southbound [B][D] trains are running with delays after we moved a train at 145 St.
 police_medical_activity,Northbound [1][2][3] trains are running with delays after we got medical help for someone at 50 St. Northbound [1] has resumed local stops from 42 St to 72 St.
 subway_cars,Southbound [A][C] trains are running with delays after we removed a train with a mechanical problem from service at High St.
-signal,Southbound [N] trains are running at slower speeds near Avenue U. We are addressing a signal problem in the area.
+signals,Southbound [N] trains are running at slower speeds near Avenue U. We are addressing a signal problem in the area.
 other,Southbound [B][D] trains are delayed while we are unable to move a train at 145 St.
 police_medical_activity,"Northbound [1] runs express from 42 St to 72 St while we get medical help for someone at 50 St. For skipped stops, take a southbound train. Expect [2][3] delays."
 police_medical_activity,Northbound [1] trains are delayed while we get medical help for someone at 50 St.
 other,[1] trains are running with delays in both directions after FDNY completed an investigation near 125 St.
 subway_cars,Southbound [A][C] trains are delayed while we remove a train with a mechanical problem from service at High St.
 subway_cars,Metropolitan Av-bound [M] trains are running with delays after we addressed a door problem on a train at Delancey St-Essex St.
-signal,Southbound [N] trains are running with delays while we address a signal problem near Avenue U.
+signals,Southbound [N] trains are running with delays while we address a signal problem near Avenue U.
 police_medical_activity,[N][Q][R][W] trains are running with delays in both directions after NYPD conducted an investigation at 49 St.
 subway_cars,Northbound [4][5] trains are running with delays after we removed a train car that needs to be cleaned from service at Brooklyn Bridge-City Hall.
 tracks,Southbound [A][C][F] trains are running with delays after FDNY extinguished a track fire  at High St.
@@ -1838,7 +1838,7 @@ other,[1] trains are suspended in both directions between 96 St and 168 St-Washi
 other,[1] trains are suspended in both directions between 96 St and 168 St-Washington Hts.  What's Happening?  FDNY is conducting an investigation at 125 St.
 subway_cars,Metropolitan Av-bound [M] and Bay Ridge-bound [R] trains are running with delays after we moved a train that had its brakes activated near Queens Plaza.
 other,[1] trains are suspended in both directions between 96 St and 168 St-Washington Hts.  What's Happening?  FDNY is conducting an investigation at 125 St.
-signal,Northbound [B][C] trains are running with delays while we address a signal problem near 125 St.
+signals,Northbound [B][C] trains are running with delays while we address a signal problem near 125 St.
 subway_cars,Metropolitan Av-bound [M] and Bay Ridge-bound [R] trains are delayed while we investigate why a train's brakes were activated near Queens Plaza.
 police_medical_activity,Northbound [3] trains are running with delays after we requested EMS assistance for someone in need on a train at Wall St.
 subway_cars,[7] trains are running with delays in both directions after we investigated why a train's brakes activated near Times Sq-42 St.
@@ -1873,10 +1873,10 @@ other,[2]  trains are running on the [5] line between 149 St-Grand Concourse and
 subway_cars,Southbound [E][F] trains are delayed while we remove a train with a mechanical problem from service at Kew Gardens-Union Tpke.
 subway_cars,[2][3] trains are delayed in both directions while we investigate why a train's brakes were activated at 135 St.
 tracks,Southbound [F] trains are running with delays after track maintenance near Lexington Av/63 St concluded.
-signal,[6] trains are running with delays in both directions after we addressed a signal malfunction near Pelham Bay Park.
+signals,[6] trains are running with delays in both directions after we addressed a signal malfunction near Pelham Bay Park.
 tracks,Northbound [F] trains are running with delays after we performed track maintenance at 21 St-Queensbridge.
 subway_cars,Southbound [F] trains are running with delays after we investigated what activated a work train's brakes near Lexington Av/63 St.
-signal,[6] trains are running with delays in both directions while we address a signal malfunction near Pelham Bay Park.
+signals,[6] trains are running with delays in both directions while we address a signal malfunction near Pelham Bay Park.
 tracks,Southbound [1] trains are running with delays after we performed track maintenance near Canal St.
 tracks,Northbound [F] trains are delayed while we perform track maintenance at 21 St-Queensbridge.
 subway_cars,Southbound [F] trains are delayed while we investigate what activated a work train's brakes near Lexington Av/63 St.
@@ -1910,7 +1910,7 @@ subway_cars,Northbound [6] trains are running with delays after we removed a tra
 police_medical_activity,"Northbound [6] trains are running with delays after EMS responded to someone in need at 42 St, and we removed a train from service at 33 St."
 subway_cars,179 St-bound [F] and 71 Av-bound [M] trains are delayed while we investigate why a train's brakes activated at Broadway-Lafayette St.
 police_medical_activity,Northbound [2] trains are running with delays in the Bronx after NYPD responded to someone being disruptive at 174 St.
-signal,Northbound [N] trains are running with delays while we address a signal problem at Coney Island-Stillwell Av.
+signals,Northbound [N] trains are running with delays while we address a signal problem at Coney Island-Stillwell Av.
 subway_cars,Southbound [E][F] and Metropolitan Av-bound [M] trains are running with delays after we addressed a door problem on a train at 47-50 Sts-Rockefeller Ctr.
 police_medical_activity,Northbound [2] trains are running express from 3 Av-149 St to E 180 St. NYPD is responding to someone being disruptive at 174 St.
 police_medical_activity,"Southbound [4][5][6] trains are running with delays after EMS responded to someone in need at 42 St, and we removed a train from service at 33 St."
@@ -1955,13 +1955,13 @@ subway_cars,Southbound [B][C] trains are delayed while we address a door problem
 police_medical_activity,Southbound [F] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at W 4 St-Wash Sq.
 subway_cars,Main St-bound [7] trains are running with delays after we removed a train with a door problem from service at 40 St-Lowery St.
 subway_cars,71 Av-bound [M] trains are running with delays after we moved a train that had its brake cord pulled at Flushing Av.
-signal,Northbound [2] trains are running with delays after we addressed a signal problem near E 180 St.
-signal,Northbound [2] trains are running with delays while we address a signal problem near E 180 St.
+signals,Northbound [2] trains are running with delays after we addressed a signal problem near E 180 St.
+signals,Northbound [2] trains are running with delays while we address a signal problem near E 180 St.
 police_medical_activity,Southbound [Q] trains are running with delays after we requested EMS assistance for someone on a train at Brighton Beach.
 subway_cars,Hudson Yards-bound [7] trains are delayed while we remove a train with a door problem from service at 40 St-Lowery St.
 police_medical_activity,Southbound [Q] trains are delayed while we request EMS assistance for someone on a train at Brighton Beach.
 police_medical_activity,Northbound [4][5] trains are running with delays after we requested NYPD assistance for someone being disruptive on a train at 86 St.
-signal,[1][2][3] trains are running with delays in both directions after we addressed a signal problem at South Ferry.
+signals,[1][2][3] trains are running with delays in both directions after we addressed a signal problem at South Ferry.
 tracks,Northbound [2][3] trains are running with delays after we addressed a switch problem at Chambers St.
 subway_cars,8th Ave-bound [L] trains are running with delays after we removed a train with a door problem from service at Halsey St.
 police_medical_activity,[6] trains are running with delays in both directions after NYPD responded to an unauthorized person on the tracks Pelham Bay Park.
@@ -1970,7 +1970,7 @@ police_medical_activity,Northbound [4][5] trains are delayed while we request NY
 police_medical_activity,Northbound [4][5] trains are delayed while we request NYPD assistance for someone being disruptive on a train at 86 St.
 police_medical_activity,Southbound [A] trains are running with delays after we requested EMS assistance for someone on a train at Euclid Av.
 tracks,[1] trains are running with delays in both directions after we addressed a switch problem at Van Cortlandt Park-242 St.
-signal,No [1] train service between Chambers St and South Ferry in both directions while we address a signal problem at South Ferry.
+signals,No [1] train service between Chambers St and South Ferry in both directions while we address a signal problem at South Ferry.
 subway_cars,[1] trains are running with delays after we addressed a mechanical problem on a train at South Ferry.
 police_medical_activity,Southbound [A] trains are delayed while we request EMS assistance for someone on a train at Euclid Av.
 subway_cars,Southbound [1] trains are delayed while we address a mechanical problem on a train at South Ferry.
@@ -1982,7 +1982,7 @@ police_medical_activity,Southbound [1] trains are running with delays after NYPD
 subway_cars,Northbound [1] trains are delayed while we remove a train in need of cleaning from service at 181 St.
 tracks,Southbound [F] trains are running with delays after we conducted urgent track maintenance near 21 St-Queensbridge.
 tracks,Southbound [D][N][R] trains are delayed while we conduct urgent track maintenance near 36 St (Brooklyn).
-signal,[6] trains are moving at slower speeds in both directions near Pelham Bay Park while we address a signal problem near that station.
+signals,[6] trains are moving at slower speeds in both directions near Pelham Bay Park while we address a signal problem near that station.
 tracks,[E][F] trains are running with delays in both directions while we conduct planned work along the lines in Queens and Manhattan.
 tracks,Southbound [F] trains are running with delays after we conducted track maintenance near Lexington Av/63 St.
 tracks,Court Sq-bound [G] trains are running with delays after we conducted track maintenance near Greenpoint Av.
@@ -1998,4 +1998,4 @@ subway_cars,[A] trains are running with delays in both directions after we moved
 subway_cars,Northbound [F] trains are running with delays after we moved a train that had its brakes activated at 47-50 Sts-Rockefeller Ctr.
 other,Southbound [N] via the [D] from 36 St (Bklyn) to Coney Island-Stillwell Av.  No [R] service in either direction between Bay Ridge-95 St and 36 St (Bklyn).
 other,"Southbound [N] via the [D] from 36 St (Brooklyn) to Coney Island-Stillwell Av.  Southbound [R] via the [D] from 36 St (Brooklyn) to 9 Av, the last stop."
-signal,Southbound [E][F] trains are running with delays after we addressed a signal problem near Steinway St.
+signals,Southbound [E][F] trains are running with delays after we addressed a signal problem near Steinway St.
