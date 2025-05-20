@@ -13,7 +13,7 @@ import {
 export default async function MetricsPage() {
   const alerts = await getAlerts();
 
-  // Calculate daily delay counts
+  // Delay Trends Chart calculations
   const dailyData = alerts.reduce((acc, alert) => {
     const date = new Date(alert.last_seen_time + 'Z');
     const dateStr = date.toLocaleDateString('en-US', {
@@ -35,32 +35,42 @@ export default async function MetricsPage() {
     return acc;
   }, {} as Record<string, { count: number; date: Date }>);
 
-  // Calculate time of day distribution
+
+  // Time of Day Chart calculations
+  type HourBucket = {
+    weekday: { count: number; days: Set<string> };
+    weekend: { count: number; days: Set<string> };
+  };
   const timeOfDayData = alerts.reduce((acc, alert) => {
     const date = new Date(alert.start_time + 'Z');
     const hour = date.getUTCHours();
-    
+    const dateKey = date.toISOString().slice(0, 10); // YYYY-MM-DD
+    const isWeekend = [0, 6].includes(date.getUTCDay());
+  
     if (!acc[hour]) {
       acc[hour] = {
-        count: 0,
-        days: new Set()
+        weekday: { count: 0, days: new Set<string>() },
+        weekend: { count: 0, days: new Set<string>() },
       };
     }
-    
-    // Add the date to the set of days for this hour
-    const dateKey = date.toISOString().split('T')[0];
-    acc[hour].days.add(dateKey);
-    acc[hour].count += 1;
-    
+  
+    const bucket = isWeekend ? acc[hour].weekend : acc[hour].weekday;
+    bucket.count += 1;
+    bucket.days.add(dateKey);
+  
     return acc;
-  }, {} as Record<number, { count: number; days: Set<string> }>);
-
-  // Convert to array and calculate averages
+  }, {} as Record<number, HourBucket>);
+  
+  // 2) Convert to sorted array, computing avg per day for each
   const timeOfDayChartData = Object.entries(timeOfDayData)
-    .map(([hour, data]) => ({
-      hour: parseInt(hour),
-      count: data.count / data.days.size // Average per day
-    }))
+    .map(([hourStr, { weekday, weekend }]) => {
+      const hour = parseInt(hourStr, 10);
+      const avgWeekday =
+        weekday.days.size > 0 ? weekday.count / weekday.days.size : 0;
+      const avgWeekend =
+        weekend.days.size > 0 ? weekend.count / weekend.days.size : 0;
+      return { hour, avgWeekday, avgWeekend };
+    })
     .sort((a, b) => a.hour - b.hour);
 
   // Get the date range

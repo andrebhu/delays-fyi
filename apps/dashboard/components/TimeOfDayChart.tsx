@@ -1,12 +1,13 @@
 'use client';
 
 import {
-  AreaChart,
-  Area,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
 } from 'recharts';
 import {
   Card,
@@ -23,14 +24,15 @@ import {
 interface TimeOfDayChartProps {
   data: {
     hour: number;
-    count: number;
+    avgWeekday: number;
+    avgWeekend: number;
   }[];
 }
 
 const chartConfig = {
   value: {
     label: 'Average Delays',
-    color: 'oklch(62.3% 0.214 259.815)', // Blue-500
+    color: 'oklch(62.3% 0.214 259.815)', // Blue-500 for weekday
   },
   label: {
     color: 'hsl(0 0% 100%)', // White
@@ -43,7 +45,7 @@ const CustomTooltip = ({
   label,
 }: {
   active?: boolean;
-  payload?: Array<{ value: number; name: string }>;
+  payload?: Array<{ value: number; name: string; dataKey: string }>;
   label?: number;
 }) => {
   if (active && payload && payload.length) {
@@ -51,11 +53,23 @@ const CustomTooltip = ({
     const period = hour >= 12 ? 'PM' : 'AM';
     const displayHour = hour % 12 || 12;
     const timeLabel = `${displayHour} ${period}`;
-    
+
+    const weekdayPoint = payload.find(p => p.dataKey === 'avgWeekday');
+    const weekendPoint = payload.find(p => p.dataKey === 'avgWeekend');
+
     return (
-      <div className="bg-white p-4 border rounded-lg shadow-sm">
+      <div className="bg-white p-4 border rounded-lg shadow-sm space-y-1">
         <p className="font-medium">{timeLabel}</p>
-        <p className="text-blue-600">Average Delays: {payload[0].value.toFixed(1)}</p>
+        {weekdayPoint && (
+          <p className="text-blue-600">
+            Weekday: {weekdayPoint.value.toFixed(1)}
+          </p>
+        )}
+        {weekendPoint && (
+          <p className="text-green-600">
+            Weekend: {weekendPoint.value.toFixed(1)}
+          </p>
+        )}
       </div>
     );
   }
@@ -68,12 +82,13 @@ export default function TimeOfDayChart({ data }: TimeOfDayChartProps) {
       <CardHeader>
         <CardTitle>Hourly Averages</CardTitle>
         <CardDescription>
-          Average number of delays by hour of day over the last 30 days.
+          Average number of delays by hour of day over the last 30 days,
+          split between weekdays and weekends.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} style={{ height: '300px', width: '100%' }}>
-          <AreaChart
+          <LineChart
             data={data}
             margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
           >
@@ -100,17 +115,26 @@ export default function TimeOfDayChart({ data }: TimeOfDayChartProps) {
               tickFormatter={(value) => value.toFixed(1)}
             />
             <Tooltip content={<CustomTooltip />} />
-            <Area
+            <Legend verticalAlign="top" height={30} />
+            <Line
               type="monotone"
-              dataKey="count"
+              dataKey="avgWeekday"
+              name="Weekday"
               stroke={chartConfig.value.color}
-              fill="hsl(221.2 83.2% 53.3% / 0.2)" // translucent fill
               strokeWidth={2}
-              activeDot={{ r: 5 }}
+              dot={false}
             />
-          </AreaChart>
+            <Line
+              type="monotone"
+              dataKey="avgWeekend"
+              name="Weekend"
+              stroke="oklch(80% 0.1 130)"
+              strokeWidth={2}
+              dot={false}
+            />
+          </LineChart>
         </ChartContainer>
       </CardContent>
     </Card>
   );
-} 
+}
