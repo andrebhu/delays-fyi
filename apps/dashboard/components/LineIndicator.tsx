@@ -20,6 +20,7 @@ const LINE_COLORS: Record<string, string> = {
   'E': '#0039A6', // Blue
   'F': '#FF6319', // Orange
   'G': '#6CBE45', // Light Green
+  'H': '#0039A6', // Blue
   'J': '#996633', // Brown
   'L': '#A7A9AC', // Grey
   'M': '#FF6319', // Orange

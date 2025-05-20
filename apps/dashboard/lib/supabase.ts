@@ -25,7 +25,7 @@ export async function fetchRouteCounts() {
 export async function getTotalAlertsCount() {
   const { count, error } = await supabase
     .from('alerts')
-    .select('*', { count: 'exact', head: true });
+    .select('alert_id', { count: 'exact', head: true });
 
   if (error) {
     console.error('Error fetching total alerts count:', error);
@@ -47,7 +47,7 @@ export async function getAlerts() {
   while (true) {
     const { data: alerts, error } = await supabase
       .from('alerts')
-      .select('*')
+      .select('alert_id, routes, start_time, last_seen_time, description')
       .gte('last_seen_time', thirtyTwoDaysAgo.toISOString())
       .lte('last_seen_time', today.toISOString())
       .range(from, from + pageSize - 1);
