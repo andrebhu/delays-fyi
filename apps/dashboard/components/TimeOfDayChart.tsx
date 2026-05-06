@@ -27,6 +27,7 @@ interface TimeOfDayChartProps {
     avgWeekday: number;
     avgWeekend: number;
   }[];
+  description?: string;
 }
 
 const chartConfig = {
@@ -76,14 +77,15 @@ const CustomTooltip = ({
   return null;
 };
 
-export default function TimeOfDayChart({ data }: TimeOfDayChartProps) {
+export default function TimeOfDayChart({
+  data,
+  description = 'Average number of delays by hour of day over the last 30 days.',
+}: TimeOfDayChartProps) {
   return (
     <Card className="gap-2">
       <CardHeader>
         <CardTitle>Hourly Averages</CardTitle>
-        <CardDescription>
-          Average number of delays by hour of day over the last 30 days.
-        </CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} style={{ height: '300px', width: '100%' }}>

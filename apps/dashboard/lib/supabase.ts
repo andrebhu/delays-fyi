@@ -10,51 +10,32 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-// Query functions
+type AlertQueryOptions = {
+  startDate?: Date;
+  endDate?: Date;
+};
 
-export async function fetchRouteCounts() {
-  const { data, error } = await supabase
-    .from('route_counts')
-    .select('route, count')
-    .order('count', { ascending: false });
-
-  if (error) throw new Error(`Failed to fetch route counts: ${error.message}`);
-  return data || [];
-}
-
-export async function getTotalAlertsCount() {
-  const { count, error } = await supabase
-    .from('alerts')
-    .select('alert_id', { count: 'exact', head: true });
-
-  if (error) {
-    console.error('Error fetching total alerts count:', error);
-    return 0;
-  }
-
-  return count || 0;
-}
-
-export async function getAlerts() {
-  const today = new Date();
-  const thirtyTwoDaysAgo = new Date();
-  thirtyTwoDaysAgo.setDate(thirtyTwoDaysAgo.getDate() - 32);
-  
+export async function getAlerts({ startDate, endDate = new Date() }: AlertQueryOptions = {}) {
   let allAlerts: Alert[] = [];
   let from = 0;
   const pageSize = 1000;
   
   while (true) {
-    const { data: alerts, error } = await supabase
+    let query = supabase
       .from('alerts')
       .select('alert_id, routes, start_time, last_seen_time, description, cause')
-      .gte('last_seen_time', thirtyTwoDaysAgo.toISOString())
-      .lte('last_seen_time', today.toISOString())
+      .lte('last_seen_time', endDate.toISOString());
+
+    if (startDate) {
+      query = query.gte('last_seen_time', startDate.toISOString());
+    }
+
+    const { data: alerts, error } = await query
+      .order('last_seen_time', { ascending: true })
       .range(from, from + pageSize - 1);
 
     if (error) {
-      console.error('Error fetching alerts:', error);
-      return [];
+      throw new Error(`Failed to fetch alerts: ${error.message}`);
     }
 
     if (!alerts || alerts.length === 0) {

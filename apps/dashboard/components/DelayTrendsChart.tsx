@@ -25,6 +25,7 @@ interface DailyDelaysChartProps {
     date: string;
     count: number;
   }[];
+  description?: string;
 }
 
 const chartConfig = {
@@ -57,15 +58,16 @@ const CustomTooltip = ({
   return null;
 };
 
-export default function DailyDelaysChart({ data }: DailyDelaysChartProps) {
+export default function DailyDelaysChart({
+  data,
+  description = 'Subway delay counts by day over the last 30 days.',
+}: DailyDelaysChartProps) {
 
   return (
     <Card className="gap-2">
       <CardHeader>
         <CardTitle>Daily Totals</CardTitle>
-        <CardDescription>
-          Subway delay counts by day over the last 30 days.
-        </CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} style={{ height: '300px', width: '100%' }}>

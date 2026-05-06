@@ -26,6 +26,7 @@ interface RouteCountsChartProps {
     route: string;
     count: number;
   }>;
+  description?: string;
 }
 
 const chartConfig = {
@@ -91,9 +92,13 @@ function renderValueLabel({ x = 0, y = 0, width = 0, height = 0, value }: BarLab
   );
 }
 
-export default function RouteCountsChart({ data }: RouteCountsChartProps) {
+export default function RouteCountsChart({
+  data,
+  description = 'Top 10 most delayed subway lines based on historical alerts since April 2025.',
+}: RouteCountsChartProps) {
   // Only show the top 10 most delayed lines
   const topData = data
+    .slice()
     .sort((a, b) => b.count - a.count)
     .slice(0, 10)
     .map(({ route, count }) => ({
@@ -111,9 +116,7 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
     <Card className="gap-2">
       <CardHeader>
         <CardTitle>Most Delayed</CardTitle>
-        <CardDescription>
-          Top 10 most delayed subway lines based on historical alerts since April 2025.
-        </CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="overflow-hidden" style={{ maxHeight }}>
         <ChartContainer config={chartConfig} style={{ height: chartHeight, width: '100%' }}>
