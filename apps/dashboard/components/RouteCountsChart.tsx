@@ -5,7 +5,6 @@ import {
   Bar,
   XAxis,
   YAxis,
-  LabelList,
   Tooltip,
 } from 'recharts';
 import {
@@ -65,6 +64,33 @@ const CustomTooltip = ({
   return null;
 };
 
+type BarLabelProps = {
+  x?: number | string;
+  y?: number | string;
+  width?: number | string;
+  height?: number | string;
+  value?: number | string;
+};
+
+function renderValueLabel({ x = 0, y = 0, width = 0, height = 0, value }: BarLabelProps) {
+  const labelX = Number(x) + Number(width) - 8;
+  const labelY = Number(y) + Number(height) / 2;
+
+  return (
+    <text
+      x={labelX}
+      y={labelY}
+      fill="#fff"
+      fontSize={12}
+      fontWeight={600}
+      textAnchor="end"
+      dominantBaseline="central"
+    >
+      {Number(value).toLocaleString()}
+    </text>
+  );
+}
+
 export default function RouteCountsChart({ data }: RouteCountsChartProps) {
   // Only show the top 10 most delayed lines
   const topData = data
@@ -76,8 +102,10 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
     }));
 
   const rowHeight = 30; // px per bar
-  const chartHeight = rowHeight * topData.length;
+  const chartHeight = Math.max(rowHeight * topData.length, rowHeight);
   const maxHeight = 500; // Max scroll height
+  const maxValue = Math.max(...topData.map((item) => item.value), 0);
+  const xAxisMax = Math.ceil(maxValue * 1.15) || 1;
 
   return (
     <Card className="gap-2">
@@ -93,6 +121,7 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
             data={topData}
             layout="vertical"
             barSize={25}
+            margin={{ top: 4, right: 48, bottom: 4, left: 8 }}
           >
             <YAxis
               dataKey="name"
@@ -110,28 +139,19 @@ export default function RouteCountsChart({ data }: RouteCountsChartProps) {
                 </foreignObject>
               )}
             />
-            <XAxis type="number" hide />
+            <XAxis type="number" domain={[0, xAxisMax]} hide />
             <Tooltip content={<CustomTooltip />} />
             <Bar
               dataKey="value"
               fill={chartConfig.value.color}
               radius={4}
               minPointSize={5}
-            >
-              <LabelList
-                dataKey="value"
-                position="right"
-                offset={8}
-                className="fill-foreground"
-                fontSize={12}
-                formatter={(value: number) => value.toLocaleString()}
-              />
-            </Bar>
+              isAnimationActive={false}
+              label={renderValueLabel}
+            />
           </BarChart>
         </ChartContainer>
       </CardContent>
     </Card>
   );
 }
-
-
